@@ -6,8 +6,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private GameObject loadingScreeGameObject;
+    
     async Awaitable Start()
     {
+        loadingScreeGameObject?.SetActive(true);
         DontDestroyOnLoad(this);
         
         try
@@ -21,7 +25,7 @@ public class GameManager : MonoBehaviour
             SessionOptions sessionOptions = new SessionOptions()
             {
                 MaxPlayers = 50
-            };
+            }.WithDistributedAuthorityNetwork();
 
             SetupMultiplayerServiceEvents();
             await MultiplayerService.Instance.CreateOrJoinSessionAsync("GOOBER", sessionOptions);
@@ -66,6 +70,7 @@ public class GameManager : MonoBehaviour
         MultiplayerService.Instance.SessionAdded += (ISession session) =>
         {
             Debug.Log($"Session added: {session.Id} -> {session.Code}");
+            loadingScreeGameObject?.SetActive(false);
         };
         MultiplayerService.Instance.AddingSessionFailed += (AddingSessionOptions options, SessionException exception) =>
         {
