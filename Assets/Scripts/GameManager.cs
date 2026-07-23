@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject loadingScreeGameObject;
     
+    [Header("Settings")]
+    [SerializeField] private string lobbyid = "GOOBER";
+    
     async Awaitable Start()
     {
         loadingScreeGameObject?.SetActive(true);
@@ -28,7 +31,7 @@ public class GameManager : MonoBehaviour
             }.WithDistributedAuthorityNetwork();
 
             SetupMultiplayerServiceEvents();
-            await MultiplayerService.Instance.CreateOrJoinSessionAsync("GOOBER", sessionOptions);
+            await MultiplayerService.Instance.CreateOrJoinSessionAsync(lobbyid, sessionOptions);
         }
         catch (Exception e)
         {

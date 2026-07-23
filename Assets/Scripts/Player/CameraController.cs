@@ -1,22 +1,24 @@
-using System;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+namespace Player
 {
-    [Header("References")]
-    [SerializeField] private Transform trackedTransform;
-    [SerializeField] private Camera childCamera;
-    
-    [Header("Settings")]
-    [SerializeField] private Vector3 offset;
-
-    [SerializeField] private float positionLerpSpeed;
-    [SerializeField] private float rotationLerpSpeed;
-
-    private void FixedUpdate()
+    public class CameraController : MonoBehaviour
     {
-        // TODO lerp these
-        transform.position = trackedTransform.position;
-        transform.rotation = trackedTransform.rotation;
+        [Header("References")]
+        [SerializeField] private Transform trackedTransform;
+        [SerializeField] private Camera childCamera;
+    
+        [Header("Settings")]
+        [SerializeField] private Vector3 offset;
+
+        [SerializeField] private float positionLerpSpeed;
+        [SerializeField] private float rotationLerpSpeed;
+
+        private void FixedUpdate()
+        {
+            // TODO lerp these
+            transform.position = trackedTransform.position;
+            transform.rotation = trackedTransform.rotation;
+        }
     }
 }
