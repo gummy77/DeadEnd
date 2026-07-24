@@ -1,6 +1,7 @@
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Player
 {
@@ -10,32 +11,80 @@ namespace Player
         [SerializeField] private GameObject playerBody;
     
         [Header("Settings")]
-        [SerializeField] private float spawnDistance = 5;
         [SerializeField] private float moveSpeed = 5f;
         [SerializeField] private float rotateSpeed = 5f;
+        [SerializeField] private float jumpStrength = 5f;
+        [SerializeField] private LayerMask groundLayerMask;
     
-    
+        [Header("Sounds")]
+        [SerializeField] private AudioClip jumpAudioClip;
+        
+        private bool _isLocked = false;
+
+        public NetworkVariable<bool> IsGrounded { get; private set; } = new NetworkVariable<bool>();
         public NetworkVariable<Vector3> Velocity { get; private set; } = new NetworkVariable<Vector3>();
     
+        
         private NetworkTransform _networkTransform;
+        private NetworkRigidbody _networkRigidbody;
+        private AudioSource _jumpAudioSource;
 
+        private InputAction _moveAction;
+        private InputAction _jumpAction;
+        
         private void Start()
         {
-            _networkTransform = playerBody.GetComponent<NetworkTransform>();
+            _moveAction = InputSystem.actions.FindAction("Move");
+            _jumpAction = InputSystem.actions.FindAction("Jump");
             
-            float angle = Random.Range(0, 360);
-            float distance = Random.Range(0, spawnDistance);
-            _networkTransform.transform.position = new Vector3(Mathf.Sin(angle) * distance, 3, Mathf.Cos(angle) * distance);
+            _networkTransform = playerBody.GetComponent<NetworkTransform>();
+            _networkRigidbody =  playerBody.GetComponent<NetworkRigidbody>();
+                
+            _jumpAudioSource = playerBody.GetComponent<AudioSource>();
         }
 
         void FixedUpdate()
         {
             if (!IsOwner) return;
-            Velocity.Value = _networkTransform.transform.rotation * new Vector3(0, 0, Input.GetAxis("Vertical"));
+            if (_isLocked)
+            {
+                Velocity.Value = Vector3.zero;
+                return;
+            }
+            Velocity.Value = _networkTransform.transform.rotation * new Vector3(0, 0, _moveAction.ReadValue<Vector2>().y);
             _networkTransform.transform.position += Velocity.Value * (moveSpeed * Time.fixedDeltaTime);
         
-            float rotationDelta = Input.GetAxis("Horizontal") * rotateSpeed * Time.fixedDeltaTime;
+            float rotationDelta = _moveAction.ReadValue<Vector2>().x * rotateSpeed * Time.fixedDeltaTime;
             _networkTransform.transform.Rotate(Vector3.up, rotationDelta);
+
+            if (!IsGrounded.Value)
+            {
+                Vector3 rayStart = _networkTransform.transform.position + new Vector3(0, 0.1f, 0);
+                IsGrounded.Value = Physics.Raycast(rayStart, Vector3.down, 0.125f, groundLayerMask);
+            }
+
+            if (_jumpAction.IsPressed() && IsGrounded.Value)
+            {
+                _networkRigidbody.Rigidbody.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+                PlayJumpSoundRpc();
+
+                IsGrounded.Value = false;
+            }
+        }
+
+        [Rpc(SendTo.Everyone)]
+        private void PlayJumpSoundRpc()
+        {
+            _jumpAudioSource.PlayOneShot(jumpAudioClip);
+        }
+
+        public void LockMovement()
+        {
+            _isLocked = true;
+        }
+        public void UnlockMovement()
+        {
+            _isLocked = false;
         }
     }
 }

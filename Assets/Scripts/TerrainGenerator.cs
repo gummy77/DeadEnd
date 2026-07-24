@@ -16,6 +16,8 @@ public class TerrainGenerator : MonoBehaviour
     private MeshCollider _meshCollider;
 
     private Mesh _mesh;
+
+    public static Action GenerationFinished;
     
     public void Start()
     {
@@ -37,5 +39,7 @@ public class TerrainGenerator : MonoBehaviour
         
         _meshFilter.sharedMesh = _mesh;
         _meshCollider.sharedMesh = _mesh;
+        
+        GenerationFinished?.Invoke();
     }
 }

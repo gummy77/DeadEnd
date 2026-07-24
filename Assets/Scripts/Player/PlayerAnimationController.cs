@@ -21,7 +21,7 @@ namespace Player
 
         private void Update()
         {
-            playerAnimator.SetFloat(Speed, _playerMovementController.Velocity.Value.magnitude);
+            playerAnimator.SetFloat(Speed, _playerMovementController.IsGrounded.Value ? _playerMovementController.Velocity.Value.magnitude : 0);
         }
     }
 }
