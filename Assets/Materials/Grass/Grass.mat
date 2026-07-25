@@ -68,6 +68,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: da35b84dc69f261a78b4dbe3ca7b5e80, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Path:
+        m_Texture: {fileID: 2800000, guid: fd5a9c66f1ec4cf4ab094ffbceecf046, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -95,7 +99,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Contrast: 1
+    - _Contrast: 1.5
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -109,6 +113,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _PathBrightness: 2.4
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -123,10 +128,13 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
-    - _Albedo: {r: 0.35895786, g: 0.8584906, b: 0.22272164, a: 1}
+    - _Albedo: {r: 0.24303886, g: 0.8962264, b: 0.063412234, a: 1}
     - _BaseColor: {r: 0.053014517, g: 1, b: 0, a: 1}
     - _Color: {r: 0.053014494, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0.05490196, b: 0, a: 1}
+    - _PathColor: {r: 0.7333964, g: 0.9245283, b: 0.3532396, a: 1}
+    - _PathOffset: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _PathScale: {r: 0.005, g: 0.005, b: 0, a: 0}
     - _Scale: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
