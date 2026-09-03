@@ -16,7 +16,7 @@ namespace Player
         private void Start()
         {
             _playerController = GetComponent<PlayerController>();
-            _playerMovementController = _playerController.MovementController;
+            _playerMovementController = _playerController.movementController;
         }
 
         private void Update()

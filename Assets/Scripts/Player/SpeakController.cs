@@ -50,8 +50,8 @@ namespace Player
 
         private async Awaitable Speak()
         {
-            _playerController.MovementController.LockMovement();
-            _playerController.CameraController.StartLookingAt(_activeSpeaker.GetLookPosition());
+            _playerController.movementController.LockMovement();
+            _playerController.cameraController.StartLookingAt(_activeSpeaker.GetLookPosition());
             speakText.color = _activeSpeaker.textColor;
             _isSpeaking = true;
             
@@ -72,8 +72,8 @@ namespace Player
             }
 
             speakText.text = "";
-            _playerController.CameraController.StopLookingAt();
-            _playerController.MovementController.UnlockMovement();
+            _playerController.cameraController.StopLookingAt();
+            _playerController.movementController.UnlockMovement();
             _isSpeaking = false;
         }
         

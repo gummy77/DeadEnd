@@ -6,7 +6,6 @@ using Random = UnityEngine.Random;
 
 namespace Player
 {
-    [RequireComponent(typeof(PlayerMovementController))]
     [RequireComponent(typeof(PlayerAnimationController))]
     [RequireComponent(typeof(SpeakController))]
     // [RequireComponent(typeof())]
@@ -15,26 +14,27 @@ namespace Player
         [Header("References")]
         [SerializeField] private GameObject playerBody;
         [SerializeField] private GameObject playerCamera;
-    
+        
         [Header("Player Settings")]
         [SerializeField] private Vector3 spawnBoundPosition;
         [SerializeField] private Vector3 spawnBoundsSize;
-        
-        public PlayerMovementController MovementController { get; private set; }
-        public PlayerAnimationController AnimationController { get; private set; }
-        public CameraController CameraController { get; private set; }
+
+        public PlayerMovementController movementController;
+        public PlayerAnimationController animationController;
+        public CameraController cameraController;
 
         public static Action<PlayerController> PlayerSpawned;
         
         private void Awake()
         {
-            MovementController = GetComponent<PlayerMovementController>();
-            AnimationController = GetComponent<PlayerAnimationController>();
-            CameraController = playerCamera.GetComponent<CameraController>();
+            animationController = GetComponent<PlayerAnimationController>();
+            cameraController = playerCamera.GetComponent<CameraController>();
         }
 
         private void Start()
         {
+            movementController.Setup();
+            
             if (!IsOwner)
             {
                 playerCamera.SetActive(false);
@@ -44,12 +44,16 @@ namespace Player
                 playerBody.transform.position = spawnBoundPosition + new Vector3(Random.Range(0,  spawnBoundsSize.x), 0, Random.Range(0, spawnBoundsSize.y));
                 PlayerSpawned?.Invoke(this);
             }
-            
+        }
+
+        private void FixedUpdate()
+        {
+            movementController.RunFixedUpdate();
         }
 
         private void OnDrawGizmosSelected()
         {
-            Gizmos.DrawCube(spawnBoundPosition + (spawnBoundsSize/2), spawnBoundsSize);
+            Gizmos.DrawWireCube(spawnBoundPosition + (spawnBoundsSize/2), spawnBoundsSize);
         }
     }
 }

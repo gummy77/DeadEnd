@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3103723728701492692}
   - component: {fileID: 7303171313230499102}
   - component: {fileID: 2285395077295284040}
-  - component: {fileID: 3119905422797738884}
   - component: {fileID: 6160955820097116278}
   - component: {fileID: 8436287524622153792}
   - component: {fileID: 5837639538306303191}
@@ -51,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3847555924
+  GlobalObjectIdHash: 3519143941
   InScenePlacedSourceGlobalObjectIdHash: 3516764404
   DeferredDespawnTick: 0
   Ownership: 1
@@ -80,29 +79,11 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   playerBody: {fileID: 4351567830591632425}
   playerCamera: {fileID: 9039272277621443159}
-  spawnBoundPosition: {x: 58.95, y: 3, z: 21.4}
-  spawnBoundsSize: {x: 2.8, y: 0, z: 5.95}
---- !u!114 &3119905422797738884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130993323479253562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95e77311f602dec596049a3c1126bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementController
-  ShowTopMostFoldoutHeaderGroup: 1
-  playerBody: {fileID: 4351567830591632425}
-  moveSpeed: 4
-  rotateSpeed: 120
-  jumpStrength: 4
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  jumpAudioClip: {fileID: 8300000, guid: 892cb3864ffd10636b0e9351bce99329, type: 3}
+  spawnBoundPosition: {x: 93.6, y: 3, z: 0}
+  spawnBoundsSize: {x: 3, y: 0, z: 4}
+  movementController: {fileID: 7796942087083333459}
+  animationController: {fileID: 6160955820097116278}
+  cameraController: {fileID: 6124916392400111869}
 --- !u!114 &6160955820097116278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +284,7 @@ GameObject:
   - component: {fileID: 2824372937641201247}
   - component: {fileID: 646789663926380921}
   - component: {fileID: 7001920002416543374}
+  - component: {fileID: 7796942087083333459}
   m_Layer: 0
   m_Name: Body
   m_TagString: Player
@@ -537,6 +519,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7796942087083333459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351567830591632425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95e77311f602dec596049a3c1126bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementController
+  ShowTopMostFoldoutHeaderGroup: 1
+  playerBody: {fileID: 4351567830591632425}
+  moveSpeed: 4
+  rotateSpeed: 120
+  jumpStrength: 4
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  jumpAudioClip: {fileID: 8300000, guid: 892cb3864ffd10636b0e9351bce99329, type: 3}
 --- !u!1 &4868482086143353464
 GameObject:
   m_ObjectHideFlags: 0

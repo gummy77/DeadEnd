@@ -1,5 +1,6 @@
 using System;
 using Player;
+using Unity.Netcode;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Multiplayer;
@@ -10,12 +11,12 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject loadingScreeGameObject;
     [SerializeField] private GameObject failureTextGameObject;
-    
+
     public static Action LobbyStarted;
 
     private void Awake()
     {
-        PlayerController.PlayerSpawned += (PlayerController player) =>
+        PlayerController.PlayerSpawned += (player) =>
         {
             if (player.IsOwner)
             {
@@ -28,41 +29,41 @@ public class GameManager : MonoBehaviour
     {
         loadingScreeGameObject?.SetActive(true);
         DontDestroyOnLoad(this);
-        
+
         try
         {
             SetupUnityServiceEvents();
             await UnityServices.InitializeAsync();
-
+        
             SetupAuthenticationServiceEvents();
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
             
             SetupMultiplayerServiceEvents();
-            var queryOptions = new QuerySessionsOptions();
-            var sessions = await MultiplayerService.Instance.QuerySessionsAsync(queryOptions);
-
-            if (sessions.Sessions.Count > 0)
-            {
-                // Join Session
-                foreach (var session in sessions.Sessions)
-                {
-                    if (!session.IsLocked && !session.HasPassword && session.AvailableSlots > 0)
-                    {
-                        ISessionInfo sessionInfo = sessions.Sessions[0];
-                        await MultiplayerService.Instance.JoinSessionByIdAsync(sessionInfo.Id);
-                        break;
-                    }
-                }
-            }
-            else
-            {
+            // var queryOptions = new QuerySessionsOptions();
+            // var sessions = await MultiplayerService.Instance.QuerySessionsAsync(queryOptions);
+            //
+            // if (sessions.Sessions.Count > 0)
+            // {
+            //     // Join Session
+            //     foreach (var session in sessions.Sessions)
+            //     {
+            //         if (!session.IsLocked && !session.HasPassword && session.AvailableSlots > 0)
+            //         {
+            //             ISessionInfo sessionInfo = sessions.Sessions[0];
+            //             await MultiplayerService.Instance.JoinSessionByIdAsync(sessionInfo.Id);
+            //             break;
+            //         }
+            //     }
+            // }
+            // else
+            // {
                 //Host new Session
                 var options = new SessionOptions
                 {
                     MaxPlayers = 150
                 }.WithDistributedAuthorityNetwork();
                 var session = await MultiplayerService.Instance.CreateSessionAsync(options);
-            }
+            // }
         }
         catch (Exception e)
         {

@@ -19,53 +19,50 @@ namespace Player
         [Header("Sounds")]
         [SerializeField] private AudioClip jumpAudioClip;
         
-        private bool _isLocked = false;
+        private bool _isLocked;
 
         public NetworkVariable<bool> IsGrounded { get; private set; } = new NetworkVariable<bool>();
         public NetworkVariable<Vector3> Velocity { get; private set; } = new NetworkVariable<Vector3>();
-    
         
-        private NetworkTransform _networkTransform;
-        private NetworkRigidbody _networkRigidbody;
+        private Rigidbody _rigidbody;
         private AudioSource _jumpAudioSource;
 
         private InputAction _moveAction;
         private InputAction _jumpAction;
         
-        private void Start()
+        public void Setup()
         {
             _moveAction = InputSystem.actions.FindAction("Move");
             _jumpAction = InputSystem.actions.FindAction("Jump");
+
+            _rigidbody =  GetComponent<Rigidbody>();
             
-            _networkTransform = playerBody.GetComponent<NetworkTransform>();
-            _networkRigidbody =  playerBody.GetComponent<NetworkRigidbody>();
-                
-            _jumpAudioSource = playerBody.GetComponent<AudioSource>();
+            _jumpAudioSource = GetComponent<AudioSource>();
         }
 
-        void FixedUpdate()
+        public void RunFixedUpdate()
         {
-            if (!IsOwner) return;
             if (_isLocked)
             {
                 Velocity.Value = Vector3.zero;
                 return;
             }
-            Velocity.Value = _networkTransform.transform.rotation * new Vector3(0, 0, _moveAction.ReadValue<Vector2>().y);
-            _networkTransform.transform.position += Velocity.Value * (moveSpeed * Time.fixedDeltaTime);
+            
+            Velocity.Value = transform.rotation * new Vector3(0, 0, _moveAction.ReadValue<Vector2>().y);
+            transform.position += Velocity.Value * (moveSpeed * Time.fixedDeltaTime);
         
             float rotationDelta = _moveAction.ReadValue<Vector2>().x * rotateSpeed * Time.fixedDeltaTime;
-            _networkTransform.transform.Rotate(Vector3.up, rotationDelta);
+            transform.Rotate(Vector3.up, rotationDelta);
 
             if (!IsGrounded.Value)
             {
-                Vector3 rayStart = _networkTransform.transform.position + new Vector3(0, 0.1f, 0);
+                Vector3 rayStart = transform.position + new Vector3(0, 0.1f, 0);
                 IsGrounded.Value = Physics.Raycast(rayStart, Vector3.down, 0.125f, groundLayerMask);
             }
 
             if (_jumpAction.IsPressed() && IsGrounded.Value)
             {
-                _networkRigidbody.Rigidbody.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+                _rigidbody.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
                 PlayJumpSoundRpc();
 
                 IsGrounded.Value = false;
