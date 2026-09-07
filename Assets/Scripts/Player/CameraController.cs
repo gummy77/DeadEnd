@@ -14,6 +14,9 @@ namespace Player
 
         [SerializeField] private float positionLerpSpeed;
         [SerializeField] private float rotationLerpSpeed;
+        
+        [SerializeField] private float defaultCameraFOV;
+        [SerializeField] private float lookingAtFOV;
 
         private bool _isCurrentlyLookingAt;
         private Vector3 _lookingAtTarget;
@@ -32,12 +35,14 @@ namespace Player
                 Vector3 direction = _lookingAtTarget - childCamera.transform.position;
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
                 childCamera.transform.rotation = Quaternion.Lerp(childCamera.transform.rotation, targetRotation, rotationLerpSpeed * Time.deltaTime);
+                childCamera.fieldOfView = Mathf.Lerp(childCamera.fieldOfView, lookingAtFOV, Time.deltaTime);
             }
             else
             {
                 childCamera.transform.localRotation = Quaternion.Lerp(childCamera.transform.localRotation, _defaultRotation, rotationLerpSpeed * Time.deltaTime);
                 transform.position = trackedTransform.position;
                 transform.rotation = trackedTransform.rotation;
+                childCamera.fieldOfView = Mathf.Lerp(childCamera.fieldOfView, defaultCameraFOV, Time.deltaTime);
             }
         }
 

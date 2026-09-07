@@ -1,12 +1,23 @@
 using System;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(AudioSource))]
 public class Speaker : MonoBehaviour
 {
+    [Serializable]
+    public struct SpeakLine
+    {
+        public string lineText;
+        public bool isDefaultColor;
+        public Color lineColor;
+
+        public UnityEvent onLineFinished;
+    }
+    
     [Header("Speak Settings")]
-    public string[] textToSpeak;
+    public SpeakLine[] textToSpeak;
     public Color textColor;
     public float speakSpeed = 1f;
     [SerializeField] private Vector3 lookOffset;
@@ -31,6 +42,7 @@ public class Speaker : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
+        if (!enabled) return;
         if (other.CompareTag("Player"))
         {
             SpeakController speakController = other.transform.parent.GetComponent<SpeakController>();
@@ -44,6 +56,7 @@ public class Speaker : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
+        if (!enabled) return;
         if (other.CompareTag("Player"))
         {
             SpeakController speakController = other.transform.parent.GetComponent<SpeakController>();

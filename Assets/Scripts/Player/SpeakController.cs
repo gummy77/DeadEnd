@@ -57,18 +57,23 @@ namespace Player
             
             for (int lineIndex = 0; lineIndex < _activeSpeaker.textToSpeak.Length; lineIndex++)
             {
+                if (!_activeSpeaker.textToSpeak[lineIndex].isDefaultColor)
+                {
+                    speakText.color = _activeSpeaker.textToSpeak[lineIndex].lineColor;
+                }
                 for (int characterIndex = 0;
-                     characterIndex < _activeSpeaker.textToSpeak[lineIndex].Length;
+                     characterIndex < _activeSpeaker.textToSpeak[lineIndex].lineText.Length;
                      characterIndex++)
                 {
-                    speakText.text = _activeSpeaker.textToSpeak[lineIndex].Substring(0, characterIndex + 1);
-                    if (_activeSpeaker.textToSpeak[lineIndex][characterIndex] != ' ')
+                    speakText.text = _activeSpeaker.textToSpeak[lineIndex].lineText.Substring(0, characterIndex + 1);
+                    if (_activeSpeaker.textToSpeak[lineIndex].lineText[characterIndex] != ' ')
                     {
                         _activeSpeaker.PlaySpeakBite();
                     }
                     await Awaitable.WaitForSecondsAsync(characterSpeed * _activeSpeaker.speakSpeed);
                 }
                 await Awaitable.WaitForSecondsAsync(lineWaitTime * _activeSpeaker.speakSpeed);
+                _activeSpeaker.textToSpeak[lineIndex].onLineFinished?.Invoke();
             }
 
             speakText.text = "";
