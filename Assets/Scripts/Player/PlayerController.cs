@@ -21,6 +21,7 @@ namespace Player
 
         public PlayerMovementController movementController;
         public PlayerAnimationController animationController;
+        public PlayerInventoryController inventoryController;
         public CameraController cameraController;
 
         public static Action<PlayerController> PlayerSpawned;
@@ -29,6 +30,7 @@ namespace Player
         {
             animationController = GetComponent<PlayerAnimationController>();
             cameraController = playerCamera.GetComponent<CameraController>();
+            inventoryController = GetComponent<PlayerInventoryController>();
         }
 
         private void Start()

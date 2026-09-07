@@ -1,4 +1,6 @@
 using Helper;
+using Pickup;
+using Player;
 using UnityEngine;
 
 namespace Characters
@@ -11,11 +13,37 @@ namespace Characters
         [SerializeField] private GameObject[] barricades;
 
         [SerializeField] private float newHeight;
-        
+
+        [SerializeField] private Item keys;
+        [SerializeField] private Item thing;
+
+        public void GiveKeys()
+        {
+            PlayerController[] playerControllers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
+            foreach (PlayerController playerController in playerControllers)
+            {
+                if (playerController.IsOwner)
+                {
+                    playerController.inventoryController.AddItem(keys);
+                }
+            }
+        }
+
+        public void GiveThing()
+        {
+            PlayerController[] playerControllers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
+            foreach (PlayerController playerController in playerControllers)
+            {
+                if (playerController.IsOwner)
+                {
+                    playerController.inventoryController.AddItem(thing);
+                }
+            }
+        }
         
         public void Spin()
         {
-            rotate().DiscardAwaitable(nameof(Spin));
+            Rotate().DiscardAwaitable(nameof(Spin));
             dialogueOne.enabled = false;
             dialogueTwo.enabled = true;
             foreach (var barricade in barricades)
@@ -24,7 +52,7 @@ namespace Characters
             }
         }
 
-        private async Awaitable rotate()
+        private async Awaitable Rotate()
         {
             float alpha = 0;
             while (alpha <= 1)
