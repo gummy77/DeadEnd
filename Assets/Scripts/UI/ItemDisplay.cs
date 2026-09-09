@@ -64,7 +64,14 @@ namespace UI
         public void UpdateDisplays()
         {
             image.sprite = _item.item.itemSprite;
-            // countText.text = "x" + _item.count;
+            if (_item.count > 1)
+            {
+                countText.text = "x" + _item.count;
+            }
+            else
+            {
+                countText.text = "";
+            }
             dragImage.sprite = _item.item.itemSprite;
         }
 

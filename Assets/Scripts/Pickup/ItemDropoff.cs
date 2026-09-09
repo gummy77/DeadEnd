@@ -10,8 +10,8 @@ namespace Pickup
         [SerializeField] private Item requiredItem;
         [SerializeField] private bool consumesItem;
         
-        [SerializeField] private string successText;
-        [SerializeField] private string failureText;
+        public string successText;
+        public string failureText;
         
         [SerializeField] private UnityEvent onSuccess;
         

@@ -13,9 +13,6 @@ namespace Player
         // [SerializeField] private Transform cursorTransform;
         // [SerializeField] private Image cursorRenderer;
         
-        [Header("Prefabs")]
-        [SerializeField] private GameObject clickParticlesPrefab;
-        
         // [Header("Textures")]
         // [SerializeField] private Sprite cursorOpen;
         // [SerializeField] private Sprite cursorClosed;
@@ -61,10 +58,6 @@ namespace Player
 
                         if (Physics.Raycast(ray, out RaycastHit hit, 20f))
                         {
-                            if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
-                            {
-                                SpawnClickParticlesRpc(hit.point, hit.transform.rotation);
-                            }
                             if (hit.transform.CompareTag("Pickup"))
                             {
                                 PickupComponent pickupComponent = hit.transform.gameObject.GetComponent<PickupComponent>();
@@ -91,12 +84,6 @@ namespace Player
             {
                 // cursorRenderer.sprite = cursorOpen;
             }
-        }
-        
-        [Rpc(SendTo.Everyone)]
-        private void SpawnClickParticlesRpc(Vector3 hitPosition, Quaternion hitRotation)
-        {
-            Instantiate(clickParticlesPrefab, hitPosition, hitRotation);
         }
     }
 }

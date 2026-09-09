@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Helper;
 using Pickup;
+using TMPro;
 using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -36,8 +38,16 @@ namespace Player
         
         [SerializeField] private List<InventoryItem> inventory;
 
-        public List<InventoryItem> startingInventory;
+        [Header("Text")]
+        [SerializeField] private AudioSource itemTextAudioSource;
+        [SerializeField] private AudioClip itemTextAudioClip;
+        [SerializeField] private TMP_Text itemText;
+        [SerializeField] private float characterSpeed;
+        [SerializeField] private float lineWaitTime;
         
+        public List<InventoryItem> startingInventory;
+
+        private bool _isReading;
         
         private void Start()
         {
@@ -116,10 +126,35 @@ namespace Player
                         if (itemDrop.DropItem(item.item))
                         {
                             RemoveItem(item.item, count);
+                            ReadOutText(itemDrop.successText).DiscardAwaitable(nameof(DropItem));
+                        }
+                        else
+                        {
+                            ReadOutText(itemDrop.failureText).DiscardAwaitable(nameof(DropItem));
                         }
                     }
                 }
             }
+        }
+        
+        private async Awaitable ReadOutText(string text)
+        {
+            if (_isReading) return;
+            
+            _isReading = true;
+            for (int characterIndex = 0; characterIndex < text.Length; characterIndex++)
+            {
+                itemText.text = text.Substring(0, characterIndex + 1);
+                if (text[characterIndex] != ' ')
+                {
+                    itemTextAudioSource.PlayOneShot(itemTextAudioClip);
+                }
+                await Awaitable.WaitForSecondsAsync(characterSpeed);
+            }
+            await Awaitable.WaitForSecondsAsync(lineWaitTime);
+
+            itemText.text = "";
+            _isReading = false;
         }
     }
 }

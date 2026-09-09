@@ -7285,7 +7285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -16.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7293,23 +7293,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -64.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.965583
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.2600953
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7317,7 +7317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 30.151
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e46dc2856a2fd4acbb6d1f734e7da011, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -16860,7 +16860,7 @@ GameObject:
   - component: {fileID: 861361397}
   - component: {fileID: 861361396}
   - component: {fileID: 861361395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18593,6 +18593,7 @@ GameObject:
   - component: {fileID: 966235409}
   - component: {fileID: 966235411}
   - component: {fileID: 966235412}
+  - component: {fileID: 966235413}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Untagged
@@ -18781,8 +18782,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 3.5, z: 1}
-  m_Center: {x: 0, y: 1.75, z: 0}
+  m_Size: {x: 0.1, y: 5, z: 1.25}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!65 &966235412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18804,6 +18805,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 2, z: 5}
   m_Center: {x: 3, y: 1, z: 0}
+--- !u!114 &966235413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966235407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 11400000, guid: b098f8f859f99e64a965bef943f837f8, type: 2}
+  consumesItem: 1
+  successText: 
+  failureText: The priest doesn't want this.
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatable: 0
 --- !u!1 &970845420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: 53372f9c238460c4b845e061fff0d95e, type: 3}
@@ -19231,7 +19252,7 @@ GameObject:
   - component: {fileID: 1019033705}
   - component: {fileID: 1019033704}
   - component: {fileID: 1019033703}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19248,7 +19269,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 13.25}
-  m_LocalScale: {x: 3, y: 1, z: 1.5}
+  m_LocalScale: {x: 6, y: 1, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 415754380}
@@ -37326,7 +37347,7 @@ Transform:
   m_GameObject: {fileID: 1898548232}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.9218632, z: -0, w: 0.38751566}
-  m_LocalPosition: {x: 42.51, y: 0.29, z: 53.9}
+  m_LocalPosition: {x: 32.46, y: 0.29, z: 69.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38394,8 +38415,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemDropoff
   requiredItem: {fileID: 11400000, guid: 4514281a838b4ac41a73714177c8af70, type: 2}
   consumesItem: 1
-  successText: 
-  failureText: 
+  successText: The door unlocks!
+  failureText: That can't be used here.
   onSuccess:
     m_PersistentCalls:
       m_Calls:
