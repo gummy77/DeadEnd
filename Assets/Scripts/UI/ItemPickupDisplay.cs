@@ -31,6 +31,12 @@ namespace UI
         private void Update()
         {
             _travelAlpha += Time.deltaTime / travelTime;
+
+            if (_target == null)
+            {
+                Destroy(gameObject);
+                return;
+            }
             
             transform.position = Vector3.Lerp(_startPosition, _target.position, _movementCurve.Evaluate(_travelAlpha));
             transform.rotation = Quaternion.Euler(0, 0, (_travelAlpha * startAngle) - startAngle);

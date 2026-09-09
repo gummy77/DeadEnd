@@ -7,9 +7,6 @@ namespace Characters
 {
     public class Mayor : MonoBehaviour
     {
-        [SerializeField] private Speaker dialogueOne;
-        [SerializeField] private Speaker dialogueTwo;
-        
         [SerializeField] private GameObject[] barricades;
 
         [SerializeField] private float newHeight;
@@ -44,8 +41,6 @@ namespace Characters
         public void Spin()
         {
             Rotate().DiscardAwaitable(nameof(Spin));
-            dialogueOne.enabled = false;
-            dialogueTwo.enabled = true;
             foreach (var barricade in barricades)
             {
                 barricade.SetActive(false);

@@ -18,6 +18,7 @@ public class Speaker : MonoBehaviour
     
     [Header("Speak Settings")]
     public SpeakLine[] textToSpeak;
+    public SpeakLine[] repeatingTextToSpeak;
     public Color textColor;
     public float speakSpeed = 1f;
     [SerializeField] private Vector3 lookOffset;
@@ -25,6 +26,8 @@ public class Speaker : MonoBehaviour
     
     private AudioSource _audioSource;
 
+    public bool hasSpokenTo;
+    
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -35,6 +38,11 @@ public class Speaker : MonoBehaviour
         return transform.position + lookOffset;
     }
 
+    public void HasSpokenTo()
+    {
+        hasSpokenTo = true;
+    }
+    
     public void PlaySpeakBite()
     {
         _audioSource?.PlayOneShot(speakBiteAudioClip);

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8436287524622153792}
   - component: {fileID: 5837639538306303191}
   - component: {fileID: 6332934679791016769}
+  - component: {fileID: 6534255213255672716}
   m_Layer: 0
   m_Name: Player Character
   m_TagString: Player
@@ -84,6 +85,7 @@ MonoBehaviour:
   spawnBoundsSize: {x: 3, y: 0, z: 4}
   movementController: {fileID: 7796942087083333459}
   animationController: {fileID: 6160955820097116278}
+  inventoryController: {fileID: 0}
   cameraController: {fileID: 6124916392400111869}
 --- !u!114 &6160955820097116278
 MonoBehaviour:
@@ -228,6 +230,20 @@ MonoBehaviour:
   uiItemsPrefab: {fileID: 972151542521778591, guid: 1e04fae66ef7a52449bdae57c55f74bf, type: 3}
   inventory: []
   startingInventory: []
+--- !u!114 &6534255213255672716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130993323479253562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8f9c34c6d6450fb7da75666c5b7f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerMouseController
+  ShowTopMostFoldoutHeaderGroup: 1
+  clickParticlesPrefab: {fileID: 150188195144073197, guid: 52bb901ad42889645b4949d5ca9cdb26, type: 3}
 --- !u!1 &2145040284839582920
 GameObject:
   m_ObjectHideFlags: 0

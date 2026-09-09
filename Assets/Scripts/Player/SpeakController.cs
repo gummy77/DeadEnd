@@ -55,25 +55,38 @@ namespace Player
             speakText.color = _activeSpeaker.textColor;
             _isSpeaking = true;
             
-            for (int lineIndex = 0; lineIndex < _activeSpeaker.textToSpeak.Length; lineIndex++)
+            Speaker.SpeakLine[] textToSpeak;
+            
+            if (!_activeSpeaker.hasSpokenTo)
             {
-                if (!_activeSpeaker.textToSpeak[lineIndex].isDefaultColor)
+                textToSpeak = _activeSpeaker.textToSpeak;
+            }
+            else
+            {
+                textToSpeak = _activeSpeaker.repeatingTextToSpeak;
+            }
+            
+            _activeSpeaker.HasSpokenTo();
+            
+            for (int lineIndex = 0; lineIndex < textToSpeak.Length; lineIndex++)
+            {
+                if (!textToSpeak[lineIndex].isDefaultColor)
                 {
-                    speakText.color = _activeSpeaker.textToSpeak[lineIndex].lineColor;
+                    speakText.color = textToSpeak[lineIndex].lineColor;
                 }
                 for (int characterIndex = 0;
-                     characterIndex < _activeSpeaker.textToSpeak[lineIndex].lineText.Length;
+                     characterIndex < textToSpeak[lineIndex].lineText.Length;
                      characterIndex++)
                 {
-                    speakText.text = _activeSpeaker.textToSpeak[lineIndex].lineText.Substring(0, characterIndex + 1);
-                    if (_activeSpeaker.textToSpeak[lineIndex].lineText[characterIndex] != ' ')
+                    speakText.text = textToSpeak[lineIndex].lineText.Substring(0, characterIndex + 1);
+                    if (textToSpeak[lineIndex].lineText[characterIndex] != ' ')
                     {
                         _activeSpeaker.PlaySpeakBite();
                     }
                     await Awaitable.WaitForSecondsAsync(characterSpeed * _activeSpeaker.speakSpeed);
                 }
+                textToSpeak[lineIndex].onLineFinished?.Invoke();
                 await Awaitable.WaitForSecondsAsync(lineWaitTime * _activeSpeaker.speakSpeed);
-                _activeSpeaker.textToSpeak[lineIndex].onLineFinished?.Invoke();
             }
 
             speakText.text = "";
