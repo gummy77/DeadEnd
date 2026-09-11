@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Frame
+  m_Name: Head_Teeth
   m_Shader: {fileID: -6465566751694194690, guid: c4aa1ae4679e064a68f3b4d73a8aefae, type: 3}
   m_Parent: {fileID: 2100000, guid: c411bed3e0362c5d1950c7cdf5edcfe2, type: 2}
   m_ModifiedSerializedProperties: 0
@@ -42,18 +42,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6a5281a8798d4824493d21bd68b7b0f7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 201488bcb0f697246b523cc1fbb1a057, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _EnvironmentReflections: 1
     - _SpecularHighlights: 1
-    - _Texture_Rotation: 90
+    - _Use_Face_Normals: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.90382373, b: 0.7490196, a: 1}
-    - _Shadow_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Shadow_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Texture_Scale: {r: 3, g: 3, b: 0, a: 0}
+    - _Texture_Scale: {r: 0.82, g: 0.9, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
