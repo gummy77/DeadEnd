@@ -43,7 +43,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha_Clip: 1
+    - _Alpha_Clip: 0
     - _EnvironmentReflections: 1
     - _Smoothness: 0.5
     - _SpecularHighlights: 1
