@@ -1,1 +1,0 @@
-Grower of the [[Sunflowers]]

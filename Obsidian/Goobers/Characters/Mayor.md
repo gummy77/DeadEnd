@@ -1,0 +1,3 @@
+Gives:
+- [[House Key]]
+- [[Meat]]

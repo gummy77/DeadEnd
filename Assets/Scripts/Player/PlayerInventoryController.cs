@@ -117,8 +117,8 @@ namespace Player
             if (Camera.main)
             {
                 Ray ray = Camera.main.ScreenPointToRay(eventData.position);
-
-                if (Physics.Raycast(ray, out RaycastHit hit, 20f))
+                
+                if (Physics.SphereCast(ray, 0.25f, out RaycastHit hit, 20f))
                 {
                     ItemDropoff itemDrop = hit.transform.gameObject.GetComponent<ItemDropoff>();
                     if (itemDrop)

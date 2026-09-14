@@ -234,7 +234,10 @@ MonoBehaviour:
   itemText: {fileID: 2992972889909963530}
   characterSpeed: 0.1
   lineWaitTime: 1
-  startingInventory: []
+  startingInventory:
+  - item: {fileID: 11400000, guid: b098f8f859f99e64a965bef943f837f8, type: 2}
+    count: 1
+    itemDisplay: {fileID: 0}
 --- !u!114 &6534255213255672716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +711,7 @@ Transform:
   m_GameObject: {fileID: 4868482086143353464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 3, z: -4}
+  m_LocalPosition: {x: 0, y: 2.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1445,8 +1448,8 @@ MonoBehaviour:
   offset: {x: 0, y: 3, z: -4}
   positionLerpSpeed: 1
   rotationLerpSpeed: 1
-  defaultCameraFOV: 80
-  lookingAtFOV: 40
+  defaultCameraFOV: 100
+  lookingAtFOV: 50
 --- !u!1001 &4189000963093592670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1672,7 +1675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d67e8a528bd5b61ba34acbeb6925e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStepAudioController
-  volumeRange: {x: 0.3, y: 0.4}
+  volumeRange: {x: 0.5, y: 0.6}
   pitchRange: {x: 0.8, y: 1}
   audioClips:
   - {fileID: 8300000, guid: f894ac9c1da15c447b03fb0f4e5b6f67, type: 3}

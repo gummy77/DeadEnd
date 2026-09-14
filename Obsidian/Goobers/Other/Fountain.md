@@ -1,0 +1,5 @@
+Takes: 
+- [[Coins]]
+
+Gives:
+- 

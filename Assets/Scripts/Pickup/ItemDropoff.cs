@@ -26,16 +26,11 @@ namespace Pickup
             if (item == requiredItem)
             {
                 onSuccess.Invoke();
-                // display success text
                 _completed = true;
                 if (consumesItem)
                 {
                     return true;
                 }
-            }
-            else
-            {
-                // display failure text
             }
 
             return false;

@@ -24,7 +24,7 @@ namespace Player
             {
                 if (_drownTimer > 0)
                 {
-                    _drownTimer -= Time.deltaTime;
+                    _drownTimer -= Time.deltaTime * 2f;
                 }
             }
             
