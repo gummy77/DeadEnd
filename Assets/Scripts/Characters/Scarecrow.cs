@@ -1,3 +1,4 @@
+using Helper;
 using Pickup;
 using Player;
 using UnityEngine;
@@ -8,7 +9,8 @@ namespace Characters
     {
         [SerializeField] private Speaker speaker;
         [SerializeField] private AudioSource audioSource;
-        [SerializeField] private AudioClip audioClip;
+        [SerializeField] private AudioClip screamClip;
+        [SerializeField] private AudioClip snipClip;
 
         [SerializeField] private GameObject closedBody;
         [SerializeField] private GameObject openedBody;
@@ -18,18 +20,25 @@ namespace Characters
         public void CutOpen()
         {
             speaker.enabled = false;
-            audioSource.PlayOneShot(audioClip);
+            audioSource.PlayOneShot(screamClip);
             
+            DoCut().DiscardAwaitable(nameof(CutOpen));
+        }
+
+        public async Awaitable DoCut()
+        {
+            await Awaitable.WaitForSecondsAsync(0.5f);
+            
+            audioSource.PlayOneShot(snipClip);
             closedBody.SetActive(false);
             openedBody.SetActive(true);
             
-            PlayerController[] playerControllers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-            foreach (PlayerController playerController in playerControllers)
+            await Awaitable.WaitForSecondsAsync(0.5f);
+            
+            PlayerController playerController = FindAnyObjectByType<PlayerController>();
+            if (playerController)
             {
-                if (playerController.IsOwner)
-                {
-                    playerController.inventoryController.AddItem(item);
-                }
+                playerController.inventoryController.AddItem(item);
             }
         }
     }

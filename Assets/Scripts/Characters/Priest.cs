@@ -19,13 +19,10 @@ namespace Characters
 
         public void GivePlayerKey()
         {
-            PlayerController[] playerControllers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-            foreach (PlayerController playerController in playerControllers)
+            PlayerController playerController = FindAnyObjectByType<PlayerController>();
+            if (playerController)
             {
-                if (playerController.IsOwner)
-                {
-                    playerController.inventoryController.AddItem(shackKey);
-                }
+                playerController.inventoryController.AddItem(shackKey);
             }
         }
     }

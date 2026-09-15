@@ -1,2 +1,6 @@
+entry through:
+- [[Mimic]]
+
 contains:
-- [[Bossfight]]
+- [[Meat Plants]]
+- [[Ancient Door]]

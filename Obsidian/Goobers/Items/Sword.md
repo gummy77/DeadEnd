@@ -1,1 +1,3 @@
+#LOOSE 
+#inprogress 
 #pickup

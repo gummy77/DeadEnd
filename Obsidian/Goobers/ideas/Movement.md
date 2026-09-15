@@ -1,2 +1,0 @@
-skateboard
-mirrors

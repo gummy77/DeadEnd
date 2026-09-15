@@ -32,8 +32,6 @@ namespace Player
 
         public void Update()
         {
-            if (!_playerController.IsOwner) return;
-            
             speakInteractObject.SetActive(!_isSpeaking && _activeSpeaker);
             
             if (!_isSpeaking)

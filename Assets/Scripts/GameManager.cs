@@ -9,7 +9,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private GameObject loadingScreeGameObject;
+    [SerializeField] private GameObject loadingScreenGameObject;
     [SerializeField] private GameObject failureTextGameObject;
 
     public static Action LobbyStarted;
@@ -18,16 +18,13 @@ public class GameManager : MonoBehaviour
     {
         PlayerController.PlayerSpawned += (player) =>
         {
-            if (player.IsOwner)
-            {
-                loadingScreeGameObject.SetActive(false);
-            }
+            loadingScreenGameObject.SetActive(false);
         };
     }
 
     async Awaitable Start()
     {
-        loadingScreeGameObject?.SetActive(true);
+        loadingScreenGameObject?.SetActive(true);
         DontDestroyOnLoad(this);
 
         try

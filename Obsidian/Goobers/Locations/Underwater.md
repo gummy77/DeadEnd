@@ -2,7 +2,7 @@ Needs:
 - [[Swimming Item]]
 
 Characters:
-- 
+- [[octopus]]
+- [[crab]]
 
 Has:
-- 

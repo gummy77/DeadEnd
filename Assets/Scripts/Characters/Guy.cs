@@ -27,10 +27,7 @@ namespace Characters
         {
             PlayerController.PlayerSpawned += (PlayerController playerController) =>
             {
-                if (playerController.IsOwner)
-                {
-                    SetupCamera();
-                }
+                SetupCamera();
             };
         }
 
@@ -43,13 +40,10 @@ namespace Characters
 
         public void GiveBeads()
         {
-            PlayerController[] playerControllers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-            foreach (PlayerController playerController in playerControllers)
+            PlayerController playerController = FindAnyObjectByType<PlayerController>();
+            if (playerController)
             {
-                if (playerController.IsOwner)
-                {
-                    playerController.inventoryController.AddItem(beads);
-                }
+                playerController.inventoryController.AddItem(beads);
             }
         }
         

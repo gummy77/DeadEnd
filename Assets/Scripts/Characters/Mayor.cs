@@ -16,25 +16,19 @@ namespace Characters
 
         public void GiveKeys()
         {
-            PlayerController[] playerControllers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-            foreach (PlayerController playerController in playerControllers)
+            PlayerController playerController = FindAnyObjectByType<PlayerController>();
+            if (playerController)
             {
-                if (playerController.IsOwner)
-                {
-                    playerController.inventoryController.AddItem(keys);
-                }
+                playerController.inventoryController.AddItem(keys);
             }
         }
 
         public void GiveThing()
         {
-            PlayerController[] playerControllers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-            foreach (PlayerController playerController in playerControllers)
+            PlayerController playerController = FindAnyObjectByType<PlayerController>();
+            if (playerController)
             {
-                if (playerController.IsOwner)
-                {
-                    playerController.inventoryController.AddItem(thing);
-                }
+                playerController.inventoryController.AddItem(thing);
             }
         }
         

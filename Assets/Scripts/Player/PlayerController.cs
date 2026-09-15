@@ -9,7 +9,7 @@ namespace Player
     [RequireComponent(typeof(PlayerAnimationController))]
     [RequireComponent(typeof(SpeakController))]
     // [RequireComponent(typeof())]
-    public class PlayerController : NetworkBehaviour
+    public class PlayerController : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private GameObject playerBody;
@@ -37,15 +37,7 @@ namespace Player
         {
             movementController.Setup();
             
-            if (!IsOwner)
-            {
-                playerCamera.SetActive(false);
-            }
-            else
-            {
-                playerBody.transform.position = spawnBoundPosition + new Vector3(Random.Range(0,  spawnBoundsSize.x), 0, Random.Range(0, spawnBoundsSize.y));
-                PlayerSpawned?.Invoke(this);
-            }
+            PlayerSpawned?.Invoke(this);
         }
 
         private void FixedUpdate()

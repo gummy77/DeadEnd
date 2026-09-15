@@ -23,10 +23,7 @@ namespace Characters
         {
             PlayerController.PlayerSpawned += (PlayerController playerController) =>
             {
-                if (playerController.IsOwner)
-                {
-                    SetupCamera();
-                }
+                SetupCamera();
             };
         }
 

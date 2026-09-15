@@ -21,8 +21,8 @@ namespace Player
         
         private bool _isLocked;
 
-        public NetworkVariable<bool> IsGrounded { get; private set; } = new NetworkVariable<bool>();
-        public NetworkVariable<Vector3> Velocity { get; private set; } = new NetworkVariable<Vector3>();
+        public bool IsGrounded { get; private set; }
+        public Vector3 Velocity { get; private set; }
         
         private Rigidbody _rigidbody;
         private AudioSource _jumpAudioSource;
@@ -44,32 +44,32 @@ namespace Player
         {
             if (_isLocked)
             {
-                Velocity.Value = Vector3.zero;
+                Velocity = Vector3.zero;
                 return;
             }
             
-            Velocity.Value = transform.rotation * new Vector3(0, 0, _moveAction.ReadValue<Vector2>().y);
-            transform.position += Velocity.Value * (moveSpeed * Time.fixedDeltaTime);
+            Velocity = transform.rotation * new Vector3(0, 0, _moveAction.ReadValue<Vector2>().y);
+            transform.position += Velocity * (moveSpeed * Time.fixedDeltaTime);
         
             float rotationDelta = _moveAction.ReadValue<Vector2>().x * rotateSpeed * Time.fixedDeltaTime;
             transform.Rotate(Vector3.up, rotationDelta);
 
-            if (!IsGrounded.Value)
+            if (!IsGrounded)
             {
                 Vector3 rayStart = transform.position + new Vector3(0, 0.1f, 0);
-                IsGrounded.Value = Physics.Raycast(rayStart, Vector3.down, 0.125f, groundLayerMask);
+                IsGrounded = Physics.Raycast(rayStart, Vector3.down, 0.125f, groundLayerMask);
             }
 
-            if (_jumpAction.IsPressed() && IsGrounded.Value)
+            if (_jumpAction.IsPressed() && IsGrounded)
             {
                 _rigidbody.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
                 PlayJumpSoundRpc();
 
-                IsGrounded.Value = false;
+                IsGrounded = false;
             }
         }
 
-        [Rpc(SendTo.Everyone)]
+        // [Rpc(SendTo.Everyone)]
         private void PlayJumpSoundRpc()
         {
             _jumpAudioSource.PlayOneShot(jumpAudioClip);
