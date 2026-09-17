@@ -1,6 +1,4 @@
 #inprogress 
-Takes: 
-- [[Coins]]
 
-Gives:
-- 
+Has:
+- [[Coin]]

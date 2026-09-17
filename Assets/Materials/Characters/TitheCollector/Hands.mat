@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6186576936722645735
+--- !u!114 &-7409375264723036136
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Stand
+  m_Name: Hands
   m_Shader: {fileID: -6465566751694194690, guid: c4aa1ae4679e064a68f3b4d73a8aefae, type: 3}
   m_Parent: {fileID: 2100000, guid: c411bed3e0362c5d1950c7cdf5edcfe2, type: 2}
   m_ModifiedSerializedProperties: 0
@@ -36,23 +36,15 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 6a5281a8798d4824493d21bd68b7b0f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6a5281a8798d4824493d21bd68b7b0f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
     - _EnvironmentReflections: 1
+    - _Smoothness: 0.5
     - _SpecularHighlights: 1
-    - _Texture_Rotation: 0
+    - _Use_Face_Normals: 0
     m_Colors:
-    - _Color: {r: 0.91764706, g: 0.8862745, b: 0.8352941, a: 1}
+    - _Color: {r: 0.49056602, g: 0.37255248, b: 0.37255248, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Texture_Scale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
