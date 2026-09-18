@@ -40,12 +40,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Items/Bone.md",
+                "file": "Characters/Tithe Collector.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bone"
+              "title": "Tithe Collector"
             }
           }
         ],
@@ -139,8 +139,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -251,6 +250,7 @@
   },
   "active": "ca304d3c946d0a98",
   "lastOpenFiles": [
+    "Characters/Tithe Collector.md",
     "Items/Bone.md",
     "Locations/Graveyard.md",
     "Characters/Eyes.md",
@@ -261,7 +261,6 @@
     "Items/Fertiliser.md",
     "Characters/Farmer.md",
     "Items/Priest Beads.md",
-    "Characters/Tithe Collector.md",
     "Locations/House.md",
     "Characters/Dinner Guy.md",
     "Characters/Mayor.md",
