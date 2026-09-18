@@ -57,7 +57,7 @@ Material:
     - _Use_Face_Normals: 0
     m_Colors:
     - _BaseColor: {r: 0.053014517, g: 1, b: 0, a: 1}
-    - _Color: {r: 0.4339623, g: 0.41733047, b: 0.30090782, a: 1}
+    - _Color: {r: 0.49056602, g: 0.46572465, b: 0.3216447, a: 1}
     - _EmissionColor: {r: 0, g: 0.05490196, b: 0, a: 1}
     - _Texture_Scale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

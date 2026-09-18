@@ -8,3 +8,6 @@ Wants:
 
 Gives: 
 - 
+
+TODO:
+- add staged conversations, getting happy about the sunflowers improving health

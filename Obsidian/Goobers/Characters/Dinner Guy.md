@@ -1,4 +1,4 @@
-#inprogress
+#complete
 Wants:
 - [[Meat]]
 

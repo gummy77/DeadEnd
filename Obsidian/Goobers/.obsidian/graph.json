@@ -1,5 +1,5 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "-path:ideas",
   "showTags": false,
   "showAttachments": false,
@@ -8,38 +8,24 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "#pickup",
+      "query": "#complete",
+      "color": {
+        "a": 1,
+        "rgb": 122629
+      }
+    },
+    {
+      "query": "#loose",
       "color": {
         "a": 1,
         "rgb": 14701138
       }
     },
     {
-      "query": "#given",
+      "query": "#inprogress",
       "color": {
         "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
-      "query": "path:Characters  ",
-      "color": {
-        "a": 1,
-        "rgb": 5402336
-      }
-    },
-    {
-      "query": "path:Locations  ",
-      "color": {
-        "a": 1,
-        "rgb": 12669664
-      }
-    },
-    {
-      "query": "path:Other  ",
-      "color": {
-        "a": 1,
-        "rgb": 5431473
+        "rgb": 14731602
       }
     }
   ],
@@ -53,6 +39,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.7132754626224325,
+  "scale": 0.9999999999999853,
   "close": false
 }

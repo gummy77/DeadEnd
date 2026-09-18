@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 646789663926380921}
   - component: {fileID: 7001920002416543374}
   - component: {fileID: 7796942087083333459}
+  - component: {fileID: 1983990127303461725}
   m_Layer: 0
   m_Name: Body
   m_TagString: Player
@@ -614,6 +615,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   jumpAudioClip: {fileID: 8300000, guid: 892cb3864ffd10636b0e9351bce99329, type: 3}
+--- !u!114 &1983990127303461725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351567830591632425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04600e7a815d8a144ab597b469adfc96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.FogUpdater
+  material: {fileID: -876546973899608171, guid: ac2cd69c9120f0449a747f2fea90e9b9, type: 3}
 --- !u!1 &4868482086143353464
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +639,7 @@ GameObject:
   - component: {fileID: 838155860141615582}
   - component: {fileID: 2874205486726345359}
   - component: {fileID: 1190861416257788851}
-  - component: {fileID: 4414139641306138207}
+  - component: {fileID: 8098290340368938643}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -743,7 +757,7 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &4414139641306138207
+--- !u!81 &8098290340368938643
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1353,15 +1367,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9039272277621443159}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0.7821735, z: 0, w: -0.6230607}
+  m_LocalPosition: {x: 0, y: 0.5, z: -3.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838155860141615582}
   - {fileID: 6806707920367112412}
   m_Father: {fileID: 3103723728701492692}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -257.08, z: 0}
 --- !u!114 &6124916392400111869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1606,7 +1620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d67e8a528bd5b61ba34acbeb6925e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStepAudioController
-  volumeRange: {x: 0.5, y: 0.6}
+  volumeRange: {x: 0.4, y: 0.5}
   pitchRange: {x: 0.8, y: 1}
   audioClips:
   - {fileID: 8300000, guid: f894ac9c1da15c447b03fb0f4e5b6f67, type: 3}
