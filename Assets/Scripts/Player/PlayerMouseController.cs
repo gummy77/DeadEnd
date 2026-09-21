@@ -67,7 +67,7 @@ namespace Player
                                     bool success = pickupComponent.DoPickup();
                                     if (pickupComponent.item && _playerInventoryController && success)
                                     {
-                                        _playerInventoryController.AddItem(pickupComponent.item);
+                                        _playerInventoryController.AddItem(pickupComponent.item, spawnPoint: _pointAction.ReadValue<Vector2>());
                                     }
                                 }
                             }

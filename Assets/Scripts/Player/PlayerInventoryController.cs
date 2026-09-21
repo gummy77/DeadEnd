@@ -59,7 +59,7 @@ namespace Player
             }
         }
 
-        public void AddItem(Item item, int count = 1)
+        public void AddItem(Item item, int count = 1, Vector2 spawnPoint = default(Vector2))
         {
             bool isInInventory = false;
             
@@ -85,7 +85,7 @@ namespace Player
                     inventory.Add(newItem);
                     
                     itemDisplay.SetItem(newItem, this);
-                    itemDisplay.PickupItem(item, new Vector2(Screen.width/2f, Screen.height/2f));
+                    itemDisplay.PickupItem(item, (spawnPoint != default(Vector2)) ? spawnPoint : new Vector2(Screen.width/2f, Screen.height/2f));
                 }
             }
         }
