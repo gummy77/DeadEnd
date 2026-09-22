@@ -11,9 +11,12 @@ namespace Characters
         [SerializeField] private GameObject feather;
         
         [SerializeField] private AudioSource audioSource;
+
+        private bool _hasSquawked;
         
         public async Awaitable Squawk()
         {
+            _hasSquawked = true;
             audioSource.Play();
             
             feather?.SetActive(true);
@@ -23,7 +26,7 @@ namespace Characters
             {
                 timer += Time.deltaTime;
 
-                crowBody.transform.position += new Vector3(0f, Time.deltaTime * 5, 0f);
+                crowBody.transform.position += new Vector3(0f, Time.deltaTime * 6, 0f);
                 
                 await Awaitable.NextFrameAsync();
             }
@@ -33,9 +36,12 @@ namespace Characters
         
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player")
+            if (!_hasSquawked)
             {
-                Squawk().DiscardAwaitable(nameof(OnTriggerEnter));
+                if (other.tag == "Player")
+                {
+                    Squawk().DiscardAwaitable(nameof(OnTriggerEnter));
+                }
             }
         }
     }

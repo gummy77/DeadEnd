@@ -26,12 +26,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Items/Sword.md",
+                "file": "Locations/Underwater.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sword"
+              "title": "Underwater"
             }
           },
           {
@@ -250,6 +250,11 @@
   },
   "active": "ca304d3c946d0a98",
   "lastOpenFiles": [
+    "Locations/Underwater.md",
+    "Characters/Gravekeeper.md",
+    "Locations/Graveyard.md",
+    "Items/Feather.md",
+    "Other/Crow.md",
     "Items/Sword.md",
     "Characters/octopus.md",
     "Characters/crab.md",
@@ -257,7 +262,6 @@
     "Characters/Tithe Collector.md",
     "Other/Fountain.md",
     "Items/Bone.md",
-    "Locations/Graveyard.md",
     "Characters/Eyes.md",
     "Other/Meat Plants.md",
     "Items/Coin.md",
@@ -272,10 +276,6 @@
     "Coins.md",
     "ideas/Coins.md",
     "Locations/Church.md",
-    "Items/Swimming Item.md",
-    "Characters/Priest.md",
-    "Locations/East.md",
-    "Items/Shears.md",
     "Other",
     "ideas",
     "Characters",
