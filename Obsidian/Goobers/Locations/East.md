@@ -5,5 +5,5 @@ needs:
 has:
 - [[Scales Statue]]
 - [[Fisherman]]
-- [[Old God]]
-- [[Mimic]]
+- 
+- 

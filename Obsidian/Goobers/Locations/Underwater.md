@@ -8,3 +8,4 @@ Characters:
 - [[crab]]
 
 Has:
+- [[Fish]]

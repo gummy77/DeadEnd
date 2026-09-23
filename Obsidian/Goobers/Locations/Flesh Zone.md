@@ -1,5 +1,5 @@
 entry through:
-- [[Mimic]]
+- 
 
 contains:
 - [[Meat Plants]]
