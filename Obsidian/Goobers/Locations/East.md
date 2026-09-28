@@ -3,7 +3,7 @@ needs:
 - [[Bridge]]
 
 has:
-- [[Scales Statue]]
+- [[Judgement]]
 - [[Fisherman]]
 - 
 - 

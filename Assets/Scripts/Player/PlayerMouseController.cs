@@ -60,14 +60,18 @@ namespace Player
                         {
                             if (hit.transform.CompareTag("Pickup"))
                             {
-                                PickupComponent pickupComponent = hit.transform.gameObject.GetComponent<PickupComponent>();
+                                PickupComponent[] pickupComponents = hit.transform.gameObject.GetComponents<PickupComponent>();
 
-                                if (pickupComponent)
+                                foreach (PickupComponent pickupComponent in pickupComponents)
                                 {
-                                    bool success = pickupComponent.DoPickup();
-                                    if (pickupComponent.item && _playerInventoryController && success)
+                                    if (pickupComponent)
                                     {
-                                        _playerInventoryController.AddItem(pickupComponent.item, spawnPoint: _pointAction.ReadValue<Vector2>());
+                                        bool success = pickupComponent.DoPickup();
+                                        if (pickupComponent.item && _playerInventoryController && success)
+                                        {
+                                            _playerInventoryController.AddItem(pickupComponent.item,
+                                                spawnPoint: _pointAction.ReadValue<Vector2>());
+                                        }
                                     }
                                 }
                             }

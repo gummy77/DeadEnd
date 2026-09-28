@@ -59,6 +59,18 @@ namespace Player
             }
         }
 
+        public bool CheckItem(Item item)
+        {
+            foreach (var inventoryItem in inventory)
+            {
+                if (item == inventoryItem.item)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public void AddItem(Item item, int count = 1, Vector2 spawnPoint = default(Vector2))
         {
             bool isInInventory = false;
@@ -120,17 +132,21 @@ namespace Player
                 
                 if (Physics.SphereCast(ray, 0.25f, out RaycastHit hit, 20f))
                 {
-                    ItemDropoff itemDrop = hit.transform.gameObject.GetComponent<ItemDropoff>();
-                    if (itemDrop)
+                    ItemDropoff[] itemDrops = hit.transform.gameObject.GetComponents<ItemDropoff>();
+
+                    foreach (var itemDrop in itemDrops)
                     {
-                        if (itemDrop.DropItem(item.item))
+                        if (itemDrop)
                         {
-                            RemoveItem(item.item, count);
-                            ReadOutText(itemDrop.successText).DiscardAwaitable(nameof(DropItem));
-                        }
-                        else
-                        {
-                            ReadOutText(itemDrop.failureText).DiscardAwaitable(nameof(DropItem));
+                            if (itemDrop.DropItem(item.item))
+                            {
+                                RemoveItem(item.item, count);
+                                ReadOutText(itemDrop.successText).DiscardAwaitable(nameof(DropItem));
+                            }
+                            else
+                            {
+                                ReadOutText(itemDrop.failureText).DiscardAwaitable(nameof(DropItem));
+                            }
                         }
                     }
                 }
