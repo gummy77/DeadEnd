@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Meat Core
+  m_Name: Meat Plant 2
   m_Shader: {fileID: -6465566751694194690, guid: 0c2e26b8d7e471840b271cf5d1d416b8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -133,9 +133,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.7075472, g: 0.5248198, b: 0.46391067, a: 1}
+    - _Color: {r: 0.8207547, g: 0.5758833, b: 0.5536223, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Shadow_Color: {r: 0.5660378, g: 0.47258815, b: 0.47258815, a: 1}
+    - _Shadow_Color: {r: 0.3962264, g: 0.37940547, b: 0.37940547, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _Texture_Scale: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
