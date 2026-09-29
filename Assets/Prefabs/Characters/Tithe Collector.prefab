@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6641314517574413715}
   - component: {fileID: 2129452750530156155}
   - component: {fileID: 33204514608727228}
-  - component: {fileID: 8459118692254016696}
   - component: {fileID: 8343594709001099599}
   m_Layer: 0
   m_Name: Tithe Collector
@@ -30,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3318002382436538540}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.048747428, y: -0.9170827, z: 0.02100403, w: -0.39514783}
+  m_LocalRotation: {x: -0.048744503, y: 0.9170828, z: -0.021002786, w: 0.39514804}
   m_LocalPosition: {x: -19.39, y: 0, z: 5.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -202,25 +201,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8459118692254016696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3318002382436538540}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03b1018ac666c29c69686461b32a1cbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Speaker
-  textToSpeak: []
-  repeatingTextToSpeak: []
-  textColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
-  speakSpeed: 1
-  lookOffset: {x: -0.5, y: 3.5, z: -0.5}
-  speakBiteAudioClip: {fileID: 0}
-  hasSpokenTo: 0
 --- !u!65 &8343594709001099599
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4325841494759809461}
   - component: {fileID: 5305703334428610334}
   m_Layer: 0
-  m_Name: Lone Eye
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

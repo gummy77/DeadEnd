@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2624371363856314427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 909616122657726921, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_Name
+      value: Church Eye Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: textToSpeak.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: repeatingTextToSpeak.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: textToSpeak.Array.data[0].lineText
+      value: I believe...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: textToSpeak.Array.data[1].lineText
+      value: I believe...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: textToSpeak.Array.data[1].isDefaultColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: repeatingTextToSpeak.Array.data[0].lineText
+      value: I believe...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: repeatingTextToSpeak.Array.data[0].isDefaultColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: textToSpeak.Array.data[0].onLineFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: textToSpeak.Array.data[0].onLineFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7868949700612498356, guid: 7f9071345cdaab741b0695cbcea2d1df, type: 3}
+    - target: {fileID: 5305703334428610334, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_Size.x
+      value: 2.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305703334428610334, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_Size.z
+      value: 1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305703334428610334, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_Center.x
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305703334428610334, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_Center.z
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.452
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.067
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.576
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209044546574485824, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 909616122657726921, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 196272750775270902}
+  m_SourcePrefab: {fileID: 100100000, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+--- !u!1 &2951046132671156722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 909616122657726921, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+  m_PrefabInstance: {fileID: 2624371363856314427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &196272750775270902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951046132671156722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 0}
+  consumesItem: 0
+  successText: 
+  failureText: The eye doesn't want this...
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatable: 0

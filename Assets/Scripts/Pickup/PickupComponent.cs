@@ -2,6 +2,7 @@ using System;
 using Player;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Pickup
 {
@@ -10,6 +11,8 @@ namespace Pickup
         public Item item;
         [SerializeField] private GameObject pickupParticlePrefab;
         [SerializeField] private bool startsPickupable;
+        
+        [SerializeField] private UnityEvent onPickup;
         
         private bool _hasBeenSetup = false;
         private bool _hasBeenPickedUp;
@@ -37,6 +40,7 @@ namespace Pickup
                 DoServerPickupRpc();
                 
                 _hasBeenPickedUp = true;
+                onPickup.Invoke();
                 return true;
             }
 

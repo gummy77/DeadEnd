@@ -1,11 +1,9 @@
-- Dialogue skip / speed through
 - Item tooltips
 - Item tutorial
 	- [[Mayor]] wants something from your car?
-- [[Sword]] can cut [[Meat Plants]]
+- [[Meat Plants]] new + alternate cut sound
 - all NPCs respond to items
 - smaller sunflower field?
-- Jumping on the bed
 - fix the door textures
 - Farmer changing dialogue
 - Priest changing dialogue

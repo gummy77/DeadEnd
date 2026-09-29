@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7319102309018144464}
   - component: {fileID: 1374002482112459591}
   - component: {fileID: 4203277219844370888}
-  - component: {fileID: 1524029937649738639}
+  - component: {fileID: 2261976334780226323}
+  - component: {fileID: 3645173024758582167}
   m_Layer: 0
   m_Name: Gravekeeper
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3735380395799467705}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.3818819, z: -0, w: 0.92421114}
+  m_LocalRotation: {x: 0, y: 0.38188508, z: 0, w: 0.9242099}
   m_LocalPosition: {x: 31.53, y: 0, z: 70.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -175,7 +176,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1524029937649738639
+--- !u!114 &2261976334780226323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,34 +185,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 3735380395799467705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03b1018ac666c29c69686461b32a1cbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 2be48b1b501641889e6e8c8c588cad1c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Speaker
-  textToSpeak:
-  - lineText: Welcome to town
-    isDefaultColor: 1
-    lineColor: {r: 0, g: 0, b: 0, a: 0}
-    onLineFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  - lineText: I hope I dont have to bury you too soon.
-    isDefaultColor: 1
-    lineColor: {r: 0, g: 0, b: 0, a: 0}
-    onLineFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  repeatingTextToSpeak:
-  - lineText: I hope I dont have to bury you too soon.
-    isDefaultColor: 1
-    lineColor: {r: 0, g: 0, b: 0, a: 0}
-    onLineFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  textColor: {r: 0.6132076, g: 0.48316032, b: 0.2053667, a: 1}
-  speakSpeed: 0.8
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSpeaker
+  dialogueColor: {r: 0.6117647, g: 0.48235294, b: 0.20392157, a: 1}
+  dialogueSpeed: 0.8
   lookOffset: {x: 0, y: 2.74, z: 0}
   speakBiteAudioClip: {fileID: 8300000, guid: 935e3e6284a1484439c84f8663f96ef4, type: 3}
-  hasSpokenTo: 0
+  dialogueSections:
+  - sectionName: Initial Dialogue
+    textToSpeak:
+    - lineText: Welcome to town
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: I hope I dont have to bury you too soon.
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 2261976334780226323}
+            m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
+            m_MethodName: MoveDialogueSection
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 1
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  - sectionName: Loop
+    textToSpeak:
+    - lineText: I hope I dont have to bury you too soon.
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  dialogueSectionIndex: 0
+  dialogueEnabled: 1
+--- !u!114 &3645173024758582167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3735380395799467705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 0}
+  consumesItem: 0
+  successText: 
+  failureText: The gravekeeper doesn't want this.
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatable: 0
 --- !u!1001 &2037048309269360432
 PrefabInstance:
   m_ObjectHideFlags: 0

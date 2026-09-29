@@ -70,10 +70,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7361687455842031245}
   - component: {fileID: 4350706709799222368}
-  - component: {fileID: 4485634864873982431}
   - component: {fileID: 8265368900037792179}
   - component: {fileID: 3982999084988753558}
   - component: {fileID: 8140566616295211089}
+  - component: {fileID: 5681515601383945082}
+  - component: {fileID: 7951446523139833143}
   m_Layer: 0
   m_Name: Farmer
   m_TagString: Untagged
@@ -89,7 +90,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5163487748004175122}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.23436826, z: -0, w: 0.97214794}
+  m_LocalRotation: {x: 0, y: 0.23437017, z: 0, w: 0.97214746}
   m_LocalPosition: {x: -44.67, y: -0.029, z: -62.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -195,55 +196,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4485634864873982431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5163487748004175122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03b1018ac666c29c69686461b32a1cbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Speaker
-  textToSpeak:
-  - lineText: hello stranger!
-    isDefaultColor: 1
-    lineColor: {r: 0, g: 0, b: 0, a: 0}
-    onLineFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  - lineText: do you have any experience in growing sunflowers?
-    isDefaultColor: 1
-    lineColor: {r: 0, g: 0, b: 0, a: 0}
-    onLineFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  - lineText: mine wont stop crying blood
-    isDefaultColor: 1
-    lineColor: {r: 0, g: 0, b: 0, a: 0}
-    onLineFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  - lineText: not sure whaat to do here...
-    isDefaultColor: 1
-    lineColor: {r: 0, g: 0, b: 0, a: 0}
-    onLineFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  repeatingTextToSpeak:
-  - lineText: not sure whaat to do here...
-    isDefaultColor: 1
-    lineColor: {r: 0, g: 0, b: 0, a: 0}
-    onLineFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  textColor: {r: 0.754717, g: 0.7017622, b: 0.33107865, a: 1}
-  speakSpeed: 0.75
-  lookOffset: {x: 0, y: 2.6, z: 0}
-  speakBiteAudioClip: {fileID: 8300000, guid: 18b66c93b04f8d62d8796c1218c42bea, type: 3}
-  hasSpokenTo: 0
 --- !u!65 &8265368900037792179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -311,6 +263,113 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: -1.05, y: 1.5, z: 0.28}
+--- !u!114 &5681515601383945082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163487748004175122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be48b1b501641889e6e8c8c588cad1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSpeaker
+  dialogueColor: {r: 0.7529412, g: 0.7019608, b: 0.32941177, a: 1}
+  dialogueSpeed: 1
+  lookOffset: {x: 0, y: 2.6, z: 0}
+  speakBiteAudioClip: {fileID: 8300000, guid: 18b66c93b04f8d62d8796c1218c42bea, type: 3}
+  dialogueSections:
+  - sectionName: Initial Dialogue
+    textToSpeak:
+    - lineText: hello stranger!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: do you have any experience in growing sunflowers?
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: mine wont stop crying blood
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: not sure what to do here...
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 5681515601383945082}
+            m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
+            m_MethodName: MoveDialogueSection
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 1
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  - sectionName: Initial Loop
+    textToSpeak:
+    - lineText: not sure whaat to do here...
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  - sectionName: Sword Removed
+    textToSpeak:
+    - lineText: Did you do something in there?
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: The sunflowers are crying a lot quieter now...
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: Thanks if you did!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 5681515601383945082}
+            m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
+            m_MethodName: MoveDialogueSection
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 3
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  - sectionName: Thanks for Helping Loop
+    textToSpeak:
+    - lineText: Thanks for helping if you did!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  dialogueSectionIndex: 0
+  dialogueEnabled: 1
+--- !u!114 &7951446523139833143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163487748004175122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 0}
+  consumesItem: 0
+  successText: 
+  failureText: The farmer doesn't want this...
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatable: 0
 --- !u!1001 &7492240330304015567
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ namespace Characters
 {
     public class Scarecrow : MonoBehaviour
     {
-        [SerializeField] private Speaker speaker;
+        [SerializeField] private DialogueSpeaker speaker;
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip screamClip;
         [SerializeField] private AudioClip snipClip;
@@ -19,7 +19,7 @@ namespace Characters
         
         public void CutOpen()
         {
-            speaker.enabled = false;
+            speaker.SetEnabled(false);
             audioSource.PlayOneShot(screamClip);
             
             DoCut().DiscardAwaitable(nameof(CutOpen));

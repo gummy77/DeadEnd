@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2708462768770581490}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -28.87, y: -0.44, z: -110.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   requiredItem: {fileID: 11400000, guid: 7dfe840c6365ca1499db8f60a3b842e2, type: 2}
   consumesItem: 0
   successText: snip!
-  failureText: 
+  failureText: you cant do anything with this...
   onSuccess:
     m_PersistentCalls:
       m_Calls:
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f80fa60a094dbc43be38dd994c44fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scarecrow
-  speaker: {fileID: 0}
+  speaker: {fileID: 4585079748251174257}
   audioSource: {fileID: 3440567912383456023}
   screamClip: {fileID: 8300000, guid: 5bcf17e967e054f47a5141ab17f4acde, type: 3}
   snipClip: {fileID: 8300000, guid: f9ef257ba3dca964cbcc45232b9e3d58, type: 3}
@@ -255,6 +255,7 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
   dialogueSectionIndex: 0
+  dialogueEnabled: 1
 --- !u!1001 &2758234744302906854
 PrefabInstance:
   m_ObjectHideFlags: 0
