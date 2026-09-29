@@ -10,7 +10,7 @@ Material:
   m_Name: Grass
   m_Shader: {fileID: -6465566751694194690, guid: c4aa1ae4679e064a68f3b4d73a8aefae, type: 3}
   m_Parent: {fileID: 2100000, guid: c411bed3e0362c5d1950c7cdf5edcfe2, type: 2}
-  m_ModifiedSerializedProperties: 2
+  m_ModifiedSerializedProperties: 6
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2

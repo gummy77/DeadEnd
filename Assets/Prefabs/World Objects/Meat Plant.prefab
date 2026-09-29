@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9154610796233398135}
   - component: {fileID: 8185140203373892741}
+  - component: {fileID: 7825249384108950263}
   - component: {fileID: 3219291307036959689}
   - component: {fileID: 4344994381071463136}
   - component: {fileID: 8538196452061549571}
@@ -55,6 +56,38 @@ MonoBehaviour:
   requiredItem: {fileID: 11400000, guid: 7dfe840c6365ca1499db8f60a3b842e2, type: 2}
   consumesItem: 0
   successText: snip!
+  failureText: 
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4344994381071463136}
+        m_TargetAssemblyTypeName: World.MeatPlant, Assembly-CSharp
+        m_MethodName: Cut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  repeatable: 0
+--- !u!114 &7825249384108950263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5734510583716744615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 11400000, guid: 805cee537d367d540b9ef7a29151da1e, type: 2}
+  consumesItem: 0
+  successText: chop!
   failureText: 
   onSuccess:
     m_PersistentCalls:

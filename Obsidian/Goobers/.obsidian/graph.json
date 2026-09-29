@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:ideas",
+  "search": "-path:ideas -path:Tasks  ",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,

@@ -6,15 +6,13 @@ namespace Characters
 {
     public class Priest : MonoBehaviour
     {
-        [SerializeField] private Speaker preBeadSpeak;
-        [SerializeField] private Speaker postBeadSpeak;
-
+        [SerializeField] private DialogueSpeaker dialogueSpeaker;
+        [SerializeField] private int withBeadsSectionIndex;
         [SerializeField] private Item shackKey;
         
         public void GiveBeads()
         {
-            preBeadSpeak.enabled = false;
-            postBeadSpeak.enabled = true;
+            dialogueSpeaker.MoveDialogueSection(withBeadsSectionIndex);
         }
 
         public void GivePlayerKey()

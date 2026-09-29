@@ -17,7 +17,7 @@ namespace Player
         [SerializeField] private float lineWaitTime;
         
         private bool _isSpeaking;
-        private Speaker _activeSpeaker;
+        private DialogueSpeaker _activeSpeaker;
 
         private PlayerController _playerController;
         
@@ -26,7 +26,6 @@ namespace Player
         private void Start()
         {
             _interactAction = InputSystem.actions.FindAction("Interact");
-                
             _playerController = GetComponent<PlayerController>();
         }
 
@@ -38,7 +37,7 @@ namespace Player
             {
                 if (_activeSpeaker)
                 {
-                    if (_interactAction.IsPressed())
+                    if (_interactAction.WasPressedThisFrame())
                     {
                         Speak().DiscardAwaitable(nameof(Speak));
                     }
@@ -50,41 +49,34 @@ namespace Player
         {
             _playerController.movementController.LockMovement();
             _playerController.cameraController.StartLookingAt(_activeSpeaker.GetLookPosition());
-            speakText.color = _activeSpeaker.textColor;
+            speakText.color = _activeSpeaker.dialogueColor;
             _isSpeaking = true;
+
+            await Awaitable.WaitForSecondsAsync(0.1f);
             
-            Speaker.SpeakLine[] textToSpeak;
+            DialogueSpeaker.DialogueSection dialogueSection = _activeSpeaker.dialogueSections[_activeSpeaker.dialogueSectionIndex];
             
-            if (!_activeSpeaker.hasSpokenTo)
+            for (int lineIndex = 0; lineIndex < dialogueSection.textToSpeak.Length; lineIndex++)
             {
-                textToSpeak = _activeSpeaker.textToSpeak;
-            }
-            else
-            {
-                textToSpeak = _activeSpeaker.repeatingTextToSpeak;
-            }
-            
-            _activeSpeaker.HasSpokenTo();
-            
-            for (int lineIndex = 0; lineIndex < textToSpeak.Length; lineIndex++)
-            {
-                if (!textToSpeak[lineIndex].isDefaultColor)
-                {
-                    speakText.color = textToSpeak[lineIndex].lineColor;
-                }
+                DialogueSpeaker.DialogueLine dialogueLine = dialogueSection.textToSpeak[lineIndex];
+                speakText.color = _activeSpeaker.dialogueColor;
+
                 for (int characterIndex = 0;
-                     characterIndex < textToSpeak[lineIndex].lineText.Length;
+                     characterIndex < dialogueLine.lineText.Length;
                      characterIndex++)
                 {
-                    speakText.text = textToSpeak[lineIndex].lineText.Substring(0, characterIndex + 1);
-                    if (textToSpeak[lineIndex].lineText[characterIndex] != ' ')
+                    speakText.text = dialogueLine.lineText.Substring(0, characterIndex + 1);
+                    if (dialogueLine.lineText[characterIndex] != ' ')
                     {
                         _activeSpeaker.PlaySpeakBite();
                     }
-                    await Awaitable.WaitForSecondsAsync(characterSpeed * _activeSpeaker.speakSpeed);
+
+
+                    await Awaitable.WaitForSecondsAsync(characterSpeed * _activeSpeaker.dialogueSpeed * (_interactAction.IsPressed() ? 0.25f : 1f));
+
                 }
-                textToSpeak[lineIndex].onLineFinished?.Invoke();
-                await Awaitable.WaitForSecondsAsync(lineWaitTime * _activeSpeaker.speakSpeed);
+                dialogueLine.onLineFinished?.Invoke();
+                await Awaitable.WaitForSecondsAsync(lineWaitTime * (_interactAction.IsPressed() ? 0.5f : 1f));
             }
 
             speakText.text = "";
@@ -93,7 +85,7 @@ namespace Player
             _isSpeaking = false;
         }
         
-        public void SetSpeaker(Speaker speaker)
+        public void SetSpeaker(DialogueSpeaker speaker)
         {
             _activeSpeaker = speaker;
         }

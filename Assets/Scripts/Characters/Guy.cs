@@ -9,7 +9,7 @@ namespace Characters
     public class Guy : MonoBehaviour
     {
         [SerializeField] private GameObject meatCube;
-        [SerializeField] private Speaker speaker;
+        [SerializeField] private DialogueSpeaker speaker;
 
         [SerializeField] private Item beads;
         
@@ -34,7 +34,7 @@ namespace Characters
         public void GiveDinner()
         {
             meatCube.SetActive(true);
-            speaker.enabled = true;
+            speaker.SetEnabled(true);
             _hasDinner = true;
         }
 

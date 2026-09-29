@@ -1,0 +1,14 @@
+- Dialogue skip / speed through
+- Item tooltips
+- Item tutorial
+	- [[Mayor]] wants something from your car?
+- [[Sword]] can cut [[Meat Plants]]
+- all NPCs respond to items
+- smaller sunflower field?
+- Jumping on the bed
+- fix the door textures
+- Farmer changing dialogue
+- Priest changing dialogue
+- dinner guy changing?
+- shortcuts? :o
+- automatic inventory read for items

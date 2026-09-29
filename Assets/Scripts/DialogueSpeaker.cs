@@ -4,29 +4,36 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(AudioSource))]
-public class Speaker : MonoBehaviour
+public class DialogueSpeaker : MonoBehaviour
 {
     [Serializable]
-    public struct SpeakLine
+    public struct DialogueSection
+    {
+        public string sectionName;
+        public DialogueLine[] textToSpeak;
+    }
+    
+    [Serializable]
+    public struct DialogueLine
     {
         public string lineText;
-        public bool isDefaultColor;
-        public Color lineColor;
-
         public UnityEvent onLineFinished;
     }
     
-    [Header("Speak Settings")]
-    public SpeakLine[] textToSpeak;
-    public SpeakLine[] repeatingTextToSpeak;
-    public Color textColor;
-    public float speakSpeed = 1f;
+    [Header("NPC Settings")]
+    public Color dialogueColor = Color.white;
+    public float dialogueSpeed = 1f;
     [SerializeField] private Vector3 lookOffset;
     [SerializeField] private AudioClip speakBiteAudioClip;
     
+    [Header("Dialogue Settings")]
+    public DialogueSection[] dialogueSections;
+    public int dialogueSectionIndex = 0;
+
+    [SerializeField] private bool dialogueEnabled = true;
+    
     private AudioSource _audioSource;
 
-    public bool hasSpokenTo;
     
     private void Awake()
     {
@@ -38,37 +45,42 @@ public class Speaker : MonoBehaviour
         return transform.position + lookOffset;
     }
 
-    public void HasSpokenTo()
-    {
-        hasSpokenTo = true;
-    }
-    
     public void PlaySpeakBite()
     {
         _audioSource?.PlayOneShot(speakBiteAudioClip);
     }
+
+    public void MoveDialogueSection(int newIndex)
+    {
+        dialogueSectionIndex = newIndex;
+    }
+
+    public void SetEnabled(bool newEnabled)
+    {
+        dialogueEnabled = newEnabled;
+    }
     
     private void OnTriggerStay(Collider other)
     {
-        if (!enabled) return;
+        if (!dialogueEnabled) return;
         if (other.CompareTag("Player"))
         {
             SpeakController speakController = other.transform.parent.GetComponent<SpeakController>();
-
+        
             if (speakController != null)
             {
-                // speakController.SetSpeaker(this);
+                speakController.SetSpeaker(this);
             }
         }
     }
     
     private void OnTriggerExit(Collider other)
     {
-        if (!enabled) return;
+        if (!dialogueEnabled) return;
         if (other.CompareTag("Player"))
         {
             SpeakController speakController = other.transform.parent.GetComponent<SpeakController>();
-
+        
             if (speakController != null)
             {
                 speakController.SetSpeaker(null);
@@ -78,7 +90,7 @@ public class Speaker : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = textColor;
+        Gizmos.color = dialogueColor;
         Gizmos.DrawSphere(GetLookPosition(), 0.25f);
     }
 }
