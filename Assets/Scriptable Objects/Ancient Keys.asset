@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Ancient Keys
   m_EditorClassIdentifier: Assembly-CSharp::Pickup.Item
   itemSprite: {fileID: 21300000, guid: 7db0c7b1d61e0834dadf66b0bdc7504c, type: 3}
+  itemName: Ancient Key

@@ -1,12 +1,12 @@
-- Item tooltips
-- Item tutorial
-	- [[Mayor]] wants something from your car?
+
 - [[Meat Plants]] new + alternate cut sound
-- all NPCs respond to items
-- smaller sunflower field?
-- fix the door textures
 - Farmer changing dialogue
 - Priest changing dialogue
 - dinner guy changing?
-- shortcuts? :o
-- automatic inventory read for items
+- automatic inventory read for items?
+- Portals
+	- House Clock
+	- Church Podium
+- Scarecrow remodel
+- Fertilizer on the Eye
+- Priest sitting down after meat plants cut

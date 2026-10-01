@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Fertiliser
   m_EditorClassIdentifier: Assembly-CSharp::Pickup.Item
   itemSprite: {fileID: 21300000, guid: b66026a9caf947b469a7a38b2cf7a350, type: 3}
+  itemName: Fertiliser

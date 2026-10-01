@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Coin
   m_EditorClassIdentifier: Assembly-CSharp::Pickup.Item
   itemSprite: {fileID: 21300000, guid: 0787b86f090fe0f40882828f47dde963, type: 3}
+  itemName: Coin

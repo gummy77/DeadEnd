@@ -8,5 +8,6 @@ namespace Pickup
     public class Item : ScriptableObject
     {
         public Sprite itemSprite;
+        public string itemName;
     }
 }

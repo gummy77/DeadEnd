@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Swimming Item
   m_EditorClassIdentifier: Assembly-CSharp::Pickup.Item
   itemSprite: {fileID: 21300000, guid: a6b4a912b5c960647958ab67f8e0bcd6, type: 3}
+  itemName: Scuba Mask

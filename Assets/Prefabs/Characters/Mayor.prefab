@@ -790,7 +790,57 @@ MonoBehaviour:
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
-    - lineText: Here! ive got some things for you
+    - lineText: You've got something for me in your boot
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: could you go and grab it for me?
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: World.Car, Assembly-CSharp
+            m_MethodName: OpenBoot
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 6200187551916099236}
+            m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
+            m_MethodName: MoveDialogueSection
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 1
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  - sectionName: Waiting for boot Item
+    textToSpeak:
+    - lineText: Go grab my thing for me.
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  - sectionName: Waiting to pass Item
+    textToSpeak:
+    - lineText: Just pass it to me and I'll let you on your way!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  - sectionName: Thanking for Item
+    textToSpeak:
+    - lineText: Thanks!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: I've got some things for you before you go,
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
@@ -810,7 +860,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-    - lineText: and these are the keys to your new place !
+    - lineText: and These are the keys to your new place!
       onLineFinished:
         m_PersistentCalls:
           m_Calls:
@@ -826,7 +876,11 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-    - lineText: 
+    - lineText: Enjoy your stay!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: Enjoy your stay!
       onLineFinished:
         m_PersistentCalls:
           m_Calls:
@@ -849,7 +903,7 @@ MonoBehaviour:
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 1
+              m_IntArgument: 4
               m_FloatArgument: 0
               m_StringArgument: 
               m_BoolArgument: 0
@@ -878,13 +932,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
-  requiredItem: {fileID: 0}
-  consumesItem: 0
+  requiredItem: {fileID: 11400000, guid: eee95e1f22990ca4db05ab36657b2770, type: 2}
+  consumesItem: 1
   successText: 
   failureText: The mayor doesn't want this.
   onSuccess:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6200187551916099236}
+        m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
+        m_MethodName: MoveDialogueSection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   repeatable: 0
 --- !u!4 &2028692129998796800 stripped
 Transform:

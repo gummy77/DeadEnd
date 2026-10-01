@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: House Keys
   m_EditorClassIdentifier: Assembly-CSharp::Pickup.Item
   itemSprite: {fileID: 21300000, guid: 268dfc6e6cbd14342af94926b4f94ea1, type: 3}
+  itemName: House Key

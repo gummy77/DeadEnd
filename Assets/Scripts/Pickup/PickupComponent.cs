@@ -11,6 +11,7 @@ namespace Pickup
         public Item item;
         [SerializeField] private GameObject pickupParticlePrefab;
         [SerializeField] private bool startsPickupable;
+        [SerializeField] private bool doesDestroy = true;
         
         [SerializeField] private UnityEvent onPickup;
         
@@ -51,7 +52,10 @@ namespace Pickup
         private void DoServerPickupRpc()
         {
             DoClientPickupRpc();
-            Destroy(gameObject);
+            if(doesDestroy)
+            {
+                Destroy(gameObject);
+            }
         }
         
         // [Rpc(SendTo.Everyone)]

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: Assembly-CSharp::Pickup.Item
   itemSprite: {fileID: 21300000, guid: 81c94a27e1da6a244bfd9a26b70a825d, type: 3}
+  itemName: Sword

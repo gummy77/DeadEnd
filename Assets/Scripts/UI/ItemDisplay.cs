@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class ItemDisplay : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+    public class ItemDisplay : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private Image image;
         [SerializeField] private TMP_Text countText;
@@ -18,6 +18,8 @@ namespace UI
         [SerializeField] private GameObject dragItem;
         [SerializeField] private Image dragImage;
         [SerializeField] private TMP_Text dragCountText;
+
+        [SerializeField] private TMP_Text itemNameText;
         
         [SerializeField] private GameObject pickupPrefab;
         
@@ -73,6 +75,7 @@ namespace UI
                 countText.text = "";
             }
             dragImage.sprite = _item.item.itemSprite;
+            itemNameText.text = _item.item.itemName;
         }
 
         private void Update()
@@ -144,6 +147,16 @@ namespace UI
                 countText.gameObject.SetActive(true);
                 _isDragging = false;
             }
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            itemNameText.gameObject.SetActive(true);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            itemNameText.gameObject.SetActive(false);
         }
     }
 }

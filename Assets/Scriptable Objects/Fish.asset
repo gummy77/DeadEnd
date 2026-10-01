@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: Assembly-CSharp::Pickup.Item
   itemSprite: {fileID: 21300000, guid: 8520af28b0bad5047bab9f06048b4516, type: 3}
+  itemName: Fish
