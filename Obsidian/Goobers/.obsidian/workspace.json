@@ -30,16 +30,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ideas/Kalidascope.md",
+                "file": "Items/Flowers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kalidascope"
+              "title": "Flowers"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "7845e5e149c2046c",
@@ -70,8 +69,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -238,13 +236,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca304d3c946d0a98",
+  "active": "be1d807d60dc48ed",
   "lastOpenFiles": [
-    "ideas/Kalidascope.md",
-    "Tasks/Todo.md",
-    "Characters/Flower Guy.md",
-    "Items/Shovel.md",
     "Items/Flowers.md",
+    "ideas/Kalidascope.md",
+    "Characters/Flower Guy.md",
+    "Tasks/Todo.md",
+    "Items/Shovel.md",
     "Locations/House.md",
     "Characters/Mayor.md",
     "Characters/Dinner Guy.md",
