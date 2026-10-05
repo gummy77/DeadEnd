@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2261976334780226323}
   - component: {fileID: 3645173024758582167}
   m_Layer: 0
-  m_Name: Gravekeeper
+  m_Name: Groundskeeper State 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   consumesItem: 0
   successText: 
-  failureText: The gravekeeper doesn't want this.
+  failureText: The groundskeeper doesn't want this.
   onSuccess:
     m_PersistentCalls:
       m_Calls: []

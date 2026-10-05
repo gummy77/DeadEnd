@@ -5,4 +5,4 @@ Characters:
 - [[Tithe Collector]]
 
 has:
-- [[Plank]]
+- 

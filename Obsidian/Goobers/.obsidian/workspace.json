@@ -9,7 +9,7 @@
         "dimension": 31.453068592057758,
         "children": [
           {
-            "id": "be1d807d60dc48ed",
+            "id": "0dae8d1ab39fbf34",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -25,20 +25,35 @@
             }
           },
           {
-            "id": "bc3a9147517fe022",
+            "id": "1ad1f487f2ac7c32",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Items/Flowers.md",
+                "file": "Other/Fountain.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Flowers"
+              "title": "Fountain"
+            }
+          },
+          {
+            "id": "2bc77839c6533ade",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Locations/Church.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Church"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "7845e5e149c2046c",
@@ -69,7 +84,8 @@
               "title": "Graph view"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -236,17 +252,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "be1d807d60dc48ed",
+  "active": "ca304d3c946d0a98",
   "lastOpenFiles": [
-    "Items/Flowers.md",
-    "ideas/Kalidascope.md",
-    "Characters/Flower Guy.md",
+    "Locations/Church.md",
+    "Characters/Groundskeeper.md",
+    "Items/Plank.md",
+    "Locations/Graveyard.md",
+    "Items/Nails.md",
+    "Other/Bridge.md",
+    "Items/Planks.md",
     "Tasks/Todo.md",
-    "Items/Shovel.md",
+    "Other/Fountain.md",
     "Locations/House.md",
-    "Characters/Mayor.md",
+    "ideas/Kalidascope.md",
+    "Items/Flowers.md",
+    "Characters/Flower Guy.md",
     "Characters/Dinner Guy.md",
-    "Characters/Gravekeeper.md",
+    "Characters/Mayor.md",
     "Characters/Priest.md",
     "2026-09-28.md",
     "Tasks",
@@ -259,12 +281,6 @@
     "Other/Sunflower Heart.md",
     "Locations/East.md",
     "Characters/Mimic.md",
-    "Locations/Underwater.md",
-    "Items/Fish.md",
-    "Characters/Fisherman.md",
-    "Locations/Graveyard.md",
-    "Items/Feather.md",
-    "Other/Crow.md",
     "Other",
     "ideas",
     "Characters",

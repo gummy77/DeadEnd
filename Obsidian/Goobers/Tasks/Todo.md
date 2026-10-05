@@ -1,12 +1,10 @@
 
 - [[Meat Plants]] new + alternate cut sound
-- Farmer changing dialogue
-- Priest changing dialogue
-- dinner guy changing?
 - automatic inventory read for items?
 - Portals
 	- House Clock
 	- Church Podium
 - Scarecrow remodel
 - Fertilizer on the Eye
-- Priest sitting down after meat plants cut
+- well model
+- 

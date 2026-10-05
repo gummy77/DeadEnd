@@ -3,4 +3,3 @@
 has:
 - [[Crow]]
 - [[Bone]]
-- [[Gravekeeper]]

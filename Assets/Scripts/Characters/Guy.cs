@@ -9,26 +9,42 @@ namespace Characters
     public class Guy : MonoBehaviour
     {
         [SerializeField] private GameObject meatCube;
+        [SerializeField] private GameObject meatCubePartial;
         [SerializeField] private DialogueSpeaker speaker;
+        [SerializeField] private Transform neckTransform;
 
+        [SerializeField] private Renderer faceRenderer;
+        [SerializeField] private Material faceMatEaten;
+        [SerializeField] private int meatEatenDialogueSection;
+        
+        
         [SerializeField] private Item beads;
         
         [Header("Settings")]
         [SerializeField] private float lockDistance;
         [SerializeField] private float rotationSpeed;
 
-        [SerializeField] private Transform neckTransform;
         
         private Camera _mainCamera;
         private Quaternion _defaultRotation;
         private bool _hasDinner;
+        private DialogueSpeaker _speaker;
         
         private void Awake()
         {
+            _speaker= GetComponent<DialogueSpeaker>();
             PlayerController.PlayerSpawned += (PlayerController playerController) =>
             {
                 SetupCamera();
             };
+        }
+
+        public void EatMeat()
+        {
+            meatCubePartial.SetActive(true);
+            meatCube.SetActive(false);
+            faceRenderer.material = faceMatEaten;
+            _speaker.MoveDialogueSection(meatEatenDialogueSection);
         }
 
         public void GiveDinner()
