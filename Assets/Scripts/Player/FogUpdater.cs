@@ -2,13 +2,17 @@ using UnityEngine;
 
 namespace Player
 {
+    [ExecuteInEditMode]
     public class FogUpdater : MonoBehaviour
     {
         [SerializeField] private Material material;
         
         void Update()
         {
-            material.SetVector("_Player_Position", transform.position);
+            if (material)
+            {
+                material.SetVector("_Player_Position", transform.position);
+            }
         }
     }
 }

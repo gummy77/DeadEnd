@@ -1,6 +1,6 @@
-#inprogress 
+#complete 
 wants:
 - [[Heart]]
 - [[Feather]]
 gives:
-- [[Swimming Item]]
+- [[Scuba Mask]]

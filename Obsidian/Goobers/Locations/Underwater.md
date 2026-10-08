@@ -1,7 +1,7 @@
 #inprogress 
 
 Needs:
-- [[Swimming Item]]
+- [[Scuba Mask]]
 
 Characters:
 - [[octopus]]

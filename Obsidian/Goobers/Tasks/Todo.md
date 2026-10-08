@@ -1,10 +1,11 @@
 
 - [[Meat Plants]] new + alternate cut sound
 - automatic inventory read for items?
-- Portals
-	- House Clock
-	- Church Podium
 - Scarecrow remodel
 - Fertilizer on the Eye
 - well model
+- sleeping / day 2
+- bench for dinner guy day 2
+- new Jump sound
+- item pickup sound
 - 
