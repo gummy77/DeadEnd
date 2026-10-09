@@ -33,7 +33,7 @@ public class DialogueSpeaker : MonoBehaviour
     [SerializeField] private bool dialogueEnabled = true;
     
     private AudioSource _audioSource;
-
+    private SpeakController _speakController;
     
     private void Awake()
     {
@@ -58,6 +58,10 @@ public class DialogueSpeaker : MonoBehaviour
     public void SetEnabled(bool newEnabled)
     {
         dialogueEnabled = newEnabled;
+        if (newEnabled == false)
+        {
+            _speakController.SetSpeaker(null);
+        }
     }
     
     private void OnTriggerStay(Collider other)
@@ -65,11 +69,11 @@ public class DialogueSpeaker : MonoBehaviour
         if (!dialogueEnabled) return;
         if (other.CompareTag("Player"))
         {
-            SpeakController speakController = other.transform.parent.GetComponent<SpeakController>();
+            _speakController = other.transform.parent.GetComponent<SpeakController>();
         
-            if (speakController != null)
+            if (_speakController != null)
             {
-                speakController.SetSpeaker(this);
+                _speakController.SetSpeaker(this);
             }
         }
     }
@@ -79,11 +83,11 @@ public class DialogueSpeaker : MonoBehaviour
         if (!dialogueEnabled) return;
         if (other.CompareTag("Player"))
         {
-            SpeakController speakController = other.transform.parent.GetComponent<SpeakController>();
+            _speakController = other.transform.parent.GetComponent<SpeakController>();
         
-            if (speakController != null)
+            if (_speakController != null)
             {
-                speakController.SetSpeaker(null);
+                _speakController.SetSpeaker(null);
             }
         }
     }

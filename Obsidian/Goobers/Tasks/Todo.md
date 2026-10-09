@@ -8,4 +8,4 @@
 - bench for dinner guy day 2
 - new Jump sound
 - item pickup sound
-- 
+- Better drowning effect
