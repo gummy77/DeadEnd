@@ -11,7 +11,14 @@ namespace World
         [SerializeField] protected bool canInteract = true;
         [SerializeField] private UnityEvent onInteract;
         
+        public string interactText;
+        
         private InteractController _interactController;
+
+        public void SetInteractable(bool canNowInteract)
+        {
+            canInteract = canNowInteract;
+        }
         
         private void OnTriggerEnter(Collider other)
         {

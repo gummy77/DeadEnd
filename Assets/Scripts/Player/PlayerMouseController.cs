@@ -10,13 +10,8 @@ namespace Player
     public class PlayerMouseController : NetworkBehaviour
     {
         [Header("References")]
-        // [SerializeField] private Transform cursorTransform;
-        // [SerializeField] private Image cursorRenderer;
-        
-        // [Header("Textures")]
-        // [SerializeField] private Sprite cursorOpen;
-        // [SerializeField] private Sprite cursorClosed;
-        // [SerializeField] private Sprite cursorLooking;
+        [SerializeField] private AudioSource pickupAudioSource;
+        [SerializeField] private AudioClip pickupSound;
         
         private InputAction _clickAction;
         private InputAction _rightClickAction;
@@ -71,6 +66,11 @@ namespace Player
                                         {
                                             _playerInventoryController.AddItem(pickupComponent.item,
                                                 spawnPoint: _pointAction.ReadValue<Vector2>());
+                                        }
+
+                                        if (pickupSound)
+                                        {
+                                            pickupAudioSource?.PlayOneShot(pickupSound);
                                         }
                                     }
                                 }

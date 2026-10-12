@@ -45,6 +45,17 @@ namespace Player
             }
         }
 
+        public void StartTalkingTo(DialogueSpeaker speaker, int dialogueSectionIndex = -1)
+        {
+            SetSpeaker(speaker);
+            if (dialogueSectionIndex != -1)
+            {
+                _activeSpeaker.dialogueSectionIndex = dialogueSectionIndex;
+            }
+
+            Speak().DiscardAwaitable(nameof(Speak));
+        }
+        
         private async Awaitable Speak()
         {
             _playerController.movementController.LockMovement();

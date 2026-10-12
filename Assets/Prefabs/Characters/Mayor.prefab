@@ -279,6 +279,8 @@ MonoBehaviour:
   newHeight: 0
   keys: {fileID: 11400000, guid: 4514281a838b4ac41a73714177c8af70, type: 2}
   thing: {fileID: 11400000, guid: 6469c6931b8885d40bc51489eea62403, type: 2}
+  itemHandedDialogueSectionIndex: 3
+  mayorSpeaker: {fileID: 6200187551916099236}
 --- !u!1 &5811430306642284603
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +792,7 @@ MonoBehaviour:
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
-    - lineText: You've got something for me in your boot
+    - lineText: You've got something for me in your trunk
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
@@ -824,13 +826,13 @@ MonoBehaviour:
             m_CallState: 2
   - sectionName: Waiting for boot Item
     textToSpeak:
-    - lineText: Go grab my thing for me.
+    - lineText: could you go grab whats in your trunk for me?
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
-  - sectionName: Waiting to pass Item
+  - sectionName: Waiting to be handed item
     textToSpeak:
-    - lineText: Just pass it to me and I'll let you on your way!
+    - lineText: Just pass me the Item!
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
@@ -880,7 +882,7 @@ MonoBehaviour:
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
-    - lineText: Enjoy your stay!
+    - lineText: 
       onLineFinished:
         m_PersistentCalls:
           m_Calls:
@@ -939,10 +941,10 @@ MonoBehaviour:
   onSuccess:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6200187551916099236}
-        m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
-        m_MethodName: MoveDialogueSection
-        m_Mode: 3
+      - m_Target: {fileID: 3681370171269752856}
+        m_TargetAssemblyTypeName: Characters.Mayor, Assembly-CSharp
+        m_MethodName: ReceivedThing
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

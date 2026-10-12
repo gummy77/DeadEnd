@@ -12,7 +12,11 @@ namespace Characters
         
         public void GiveBeads()
         {
-            dialogueSpeaker.MoveDialogueSection(withBeadsSectionIndex);
+            SpeakController speakController = FindAnyObjectByType<SpeakController>();
+            if (speakController)
+            {
+                speakController.StartTalkingTo(dialogueSpeaker, withBeadsSectionIndex);
+            }
         }
 
         public void GivePlayerKey()

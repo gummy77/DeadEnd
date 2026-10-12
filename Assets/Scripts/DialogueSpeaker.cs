@@ -1,4 +1,5 @@
 using System;
+using Pickup;
 using Player;
 using UnityEngine;
 using UnityEngine.Events;

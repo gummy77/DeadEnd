@@ -271,12 +271,16 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+    requiredItem: {fileID: 0}
+    hasBeenActivated: 0
   - sectionName: Initial loop
     textToSpeak:
     - lineText: I'm here if you ever need to talk.
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
+    requiredItem: {fileID: 0}
+    hasBeenActivated: 0
   - sectionName: Found Beads
     textToSpeak:
     - lineText: Thank you for finding my beads!
@@ -339,12 +343,16 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+    requiredItem: {fileID: 0}
+    hasBeenActivated: 0
   - sectionName: Found Beads Loop
     textToSpeak:
     - lineText: If you find any of those plants, please cut them out.
       onLineFinished:
         m_PersistentCalls:
           m_Calls: []
+    requiredItem: {fileID: 0}
+    hasBeenActivated: 0
   dialogueSectionIndex: 0
   dialogueEnabled: 1
 --- !u!1001 &5286902644521505010

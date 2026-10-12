@@ -13,6 +13,10 @@ namespace Characters
 
         [SerializeField] private Item keys;
         [SerializeField] private Item thing;
+        
+        [SerializeField] private int itemHandedDialogueSectionIndex;
+        
+        [SerializeField] private DialogueSpeaker mayorSpeaker;
 
         public void GiveKeys()
         {
@@ -41,6 +45,15 @@ namespace Characters
             }
         }
 
+        public void ReceivedThing()
+        {
+            SpeakController speakController = FindAnyObjectByType<SpeakController>();
+            if (speakController)
+            {
+                speakController.StartTalkingTo(mayorSpeaker, itemHandedDialogueSectionIndex);
+            }
+        }
+        
         private async Awaitable Rotate()
         {
             float alpha = 0;

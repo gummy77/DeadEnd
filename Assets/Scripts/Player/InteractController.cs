@@ -12,7 +12,7 @@ namespace Player
         [Header("References")]
         [SerializeField] private TMP_Text interactTextObject;
         
-        [SerializeField] string interactText;
+        
         
         private Interactor _activeInteractor;
         private InputAction _interactAction;
@@ -28,7 +28,7 @@ namespace Player
             
             if (_activeInteractor)
             {
-                interactTextObject.text = interactText;
+                interactTextObject.text = _activeInteractor.interactText;
                 if (_interactAction.WasPressedThisFrame())
                 {
                     _activeInteractor.OnInteract();
