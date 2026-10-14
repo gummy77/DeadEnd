@@ -282,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSpeaker
   dialogueColor: {r: 1, g: 1, b: 1, a: 1}
   dialogueSpeed: 1
-  lookOffset: {x: 0, y: 0, z: 0}
+  lookOffset: {x: 0, y: 2.37, z: -1.07}
   speakBiteAudioClip: {fileID: 8300000, guid: 47116b0c48295b441926757f9b209e82, type: 3}
   dialogueSections:
   - sectionName: Thanking for the Food

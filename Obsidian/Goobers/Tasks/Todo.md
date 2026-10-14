@@ -1,8 +1,9 @@
 
 - [[Meat Plants]] new + alternate cut sound
-- Fertilizer on the Eye
 - New Eye Model
 - item pickup sound
 - Better drowning effect
-- Church Eye Talking
 - Groundskeeper shack interior
+- Update main menu car model
+- update car interior
+- sitting at benches
