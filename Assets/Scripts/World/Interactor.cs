@@ -18,6 +18,10 @@ namespace World
         public void SetInteractable(bool canNowInteract)
         {
             canInteract = canNowInteract;
+            if (!canInteract)
+            {
+                _interactController.SetInteractor(null);
+            }
         }
         
         private void OnTriggerEnter(Collider other)

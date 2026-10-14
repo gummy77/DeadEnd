@@ -3461,7 +3461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04600e7a815d8a144ab597b469adfc96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.FogUpdater
-  material: {fileID: -876546973899608171, guid: ac2cd69c9120f0449a747f2fea90e9b9, type: 3}
+  material: {fileID: -876546973899608171, guid: a3f86415efa1ace44b1639efc91d2fce, type: 3}
 --- !u!1001 &4189000964225904667
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,5 +5,5 @@ needs:
 has:
 - [[Judgement]]
 - [[Fisherman]]
-- 
+- [[Barricaded Building]]
 - 

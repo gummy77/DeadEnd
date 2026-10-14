@@ -104,13 +104,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 909616122657726921, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
       insertIndex: -1
       addedObject: {fileID: 196272750775270902}
+    - targetCorrespondingSourceObject: {fileID: 909616122657726921, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2069929381363530584}
   m_SourcePrefab: {fileID: 100100000, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
 --- !u!1 &2951046132671156722 stripped
 GameObject:
@@ -137,3 +141,28 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   repeatable: 0
+--- !u!114 &2069929381363530584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951046132671156722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be48b1b501641889e6e8c8c588cad1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSpeaker
+  dialogueColor: {r: 0.6, g: 0.9529412, b: 1, a: 1}
+  dialogueSpeed: 1
+  lookOffset: {x: 0, y: 0, z: 0}
+  speakBiteAudioClip: {fileID: 8300000, guid: 42897e8d8ff72ca4290cc4a40a48d852, type: 3}
+  dialogueSections:
+  - sectionName: I believe...
+    textToSpeak:
+    - lineText: I believe...
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  dialogueSectionIndex: 0
+  dialogueEnabled: 1

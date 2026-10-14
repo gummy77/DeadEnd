@@ -24,6 +24,11 @@ namespace Pickup
             SetupVariablesRpc();
         }
 
+        public void SetPickupable(bool value)
+        {
+            canPickup = value;
+        }
+        
         // [Rpc(SendTo.Server)]
         private void SetupVariablesRpc()
         {

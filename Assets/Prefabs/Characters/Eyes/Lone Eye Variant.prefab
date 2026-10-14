@@ -52,8 +52,88 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4325841494759809461, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 909616122657726921, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3314357959890790251}
+    - targetCorrespondingSourceObject: {fileID: 909616122657726921, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8572008638845347507}
   m_SourcePrefab: {fileID: 100100000, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+--- !u!1 &4919078932677191445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 909616122657726921, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+  m_PrefabInstance: {fileID: 5249947232398968540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3314357959890790251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919078932677191445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 0}
+  consumesItem: 0
+  successText: 
+  failureText: The eye doesn't want this...
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatable: 0
+--- !u!114 &8572008638845347507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919078932677191445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be48b1b501641889e6e8c8c588cad1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSpeaker
+  dialogueColor: {r: 0.6, g: 0.9529412, b: 1, a: 1}
+  dialogueSpeed: 1
+  lookOffset: {x: 0, y: 0, z: 0}
+  speakBiteAudioClip: {fileID: 8300000, guid: 42897e8d8ff72ca4290cc4a40a48d852, type: 3}
+  dialogueSections:
+  - sectionName: found
+    textToSpeak:
+    - lineText: hehehe you found me!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 5793352778540439986}
+            m_TargetAssemblyTypeName: Characters.EyeController, Assembly-CSharp
+            m_MethodName: Found
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  dialogueSectionIndex: 0
+  dialogueEnabled: 1
+--- !u!114 &5793352778540439986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1782740014644551534, guid: 5941617bb3b668849bd7e190a7721668, type: 3}
+  m_PrefabInstance: {fileID: 5249947232398968540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919078932677191445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddac7bf2f4eb0869ad6b7e754a34de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EyeController

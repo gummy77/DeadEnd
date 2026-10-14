@@ -12,7 +12,7 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private GameObject playerBody;
+        public GameObject playerBody;
         [SerializeField] private GameObject playerCamera;
         
         [Header("Player Settings")]

@@ -7,7 +7,7 @@ namespace Pickup
     public class ItemDropoff : MonoBehaviour
     {
         
-        [SerializeField] private Item requiredItem;
+        public Item requiredItem;
         [SerializeField] private bool consumesItem;
         
         public string successText;

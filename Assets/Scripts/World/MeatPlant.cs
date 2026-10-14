@@ -28,7 +28,7 @@ namespace World
             }
             transform.localScale = Vector3.one * Random.Range(0.8f, 1.2f);
             transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-            plantCollider.enabled = false;
+            plantCollider.enabled = true;
         }
         
         public void Cut()

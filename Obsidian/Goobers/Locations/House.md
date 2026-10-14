@@ -4,3 +4,6 @@ Needs:
 
 Characters:
 - [[Dinner Guy]]
+
+Has:
+- [[Clock]]

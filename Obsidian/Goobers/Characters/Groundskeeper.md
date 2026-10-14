@@ -1,5 +1,9 @@
 #inprogress  
 
+needs:
+- [[Planks]]
+- [[Nails]]
+
 repairs:
 - [[Bridge]]
 

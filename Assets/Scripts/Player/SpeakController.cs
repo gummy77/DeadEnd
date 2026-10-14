@@ -47,6 +47,16 @@ namespace Player
 
         public void StartTalkingTo(DialogueSpeaker speaker, int dialogueSectionIndex = -1)
         {
+            WaitToTalkTo(speaker, dialogueSectionIndex).DiscardAwaitable(nameof(WaitToTalkTo));
+        }
+
+        public async Awaitable WaitToTalkTo(DialogueSpeaker speaker, int dialogueSectionIndex = -1)
+        {
+            while (_isSpeaking)
+            {
+                await Awaitable.NextFrameAsync();
+            }
+
             SetSpeaker(speaker);
             if (dialogueSectionIndex != -1)
             {

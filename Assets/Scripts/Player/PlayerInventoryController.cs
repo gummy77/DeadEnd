@@ -129,24 +129,34 @@ namespace Player
             if (Camera.main)
             {
                 Ray ray = Camera.main.ScreenPointToRay(eventData.position);
-                
+
                 if (Physics.SphereCast(ray, 0.25f, out RaycastHit hit, 20f))
                 {
                     ItemDropoff[] itemDrops = hit.transform.gameObject.GetComponents<ItemDropoff>();
 
+
+                    ItemDropoff itemDropoff = null;
+
+                    bool success = false;
                     foreach (var itemDrop in itemDrops)
                     {
-                        if (itemDrop)
+                        if (itemDrop.DropItem(item.item))
                         {
-                            if (itemDrop.DropItem(item.item))
-                            {
-                                RemoveItem(item.item, count);
-                                ReadOutText(itemDrop.successText).DiscardAwaitable(nameof(DropItem));
-                            }
-                            else
-                            {
-                                ReadOutText(itemDrop.failureText).DiscardAwaitable(nameof(DropItem));
-                            }
+                            RemoveItem(item.item, count);
+                            itemDropoff = itemDrop;
+                            success = true;
+                        }
+                    }
+
+                    if (itemDropoff)
+                    {
+                        if (success)
+                        {
+                            ReadOutText(itemDropoff.successText).DiscardAwaitable(nameof(DropItem));
+                        }
+                        else
+                        {
+                            ReadOutText(itemDropoff.failureText).DiscardAwaitable(nameof(DropItem));
                         }
                     }
                 }
