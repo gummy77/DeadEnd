@@ -1,4 +1,6 @@
 using System;
+using Pickup;
+using Player;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,6 +13,8 @@ namespace World
         [SerializeField] private Collider plantCollider;
         [SerializeField] private AudioSource audioSource;
 
+        [SerializeField] private Item meatPlantItem;
+        
         private int _chosenPlant;
         
         private void Start()
@@ -38,6 +42,12 @@ namespace World
             cutParticles.Play();
             plantCollider.enabled = false;
             audioSource.Play();
+            
+            PlayerController playerController = FindAnyObjectByType<PlayerController>();
+            if (playerController)
+            {
+                playerController.inventoryController.AddItem(meatPlantItem);
+            }
         }
     }
 }

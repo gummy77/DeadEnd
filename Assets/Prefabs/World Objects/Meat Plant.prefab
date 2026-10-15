@@ -147,6 +147,7 @@ MonoBehaviour:
   cutParticles: {fileID: 708323912257556135}
   plantCollider: {fileID: 3219291307036959689}
   audioSource: {fileID: 8538196452061549571}
+  meatPlantItem: {fileID: 11400000, guid: 3ab945a10a4a40641926a1ea783422c4, type: 2}
 --- !u!82 &8538196452061549571
 AudioSource:
   m_ObjectHideFlags: 0

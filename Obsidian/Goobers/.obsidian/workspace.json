@@ -25,20 +25,21 @@
             }
           },
           {
-            "id": "a74cd66318f58032",
+            "id": "3ad7dcba5ee104b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Characters/Groundskeeper.md",
+                "file": "Locations/East Sunflower Field.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Groundskeeper"
+              "title": "East Sunflower Field"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "7845e5e149c2046c",
@@ -128,8 +129,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -240,17 +240,21 @@
   },
   "active": "ca304d3c946d0a98",
   "lastOpenFiles": [
+    "Locations/East Sunflower Field.md",
+    "Locations/West Sunflower Field.md",
+    "Characters/Scarecrow.md",
+    "Other/Sunflower Eye.md",
+    "Items/Heart.md",
+    "Locations/East.md",
     "Tasks/Todo.md",
     "Characters/Groundskeeper.md",
     "Other/Bridge.md",
-    "Locations/Sunflower Field.md",
     "Locations/Groundskeepers shack.md",
     "Items/Planks.md",
     "Items/Nails.md",
     "Items/Coin.md",
     "Items/Crowbar.md",
     "Other/Fountain.md",
-    "Locations/East.md",
     "Other/Clock.md",
     "Locations/House.md",
     "Days/Day 1.md",
@@ -263,10 +267,6 @@
     "Items/Plank.md",
     "Locations/Graveyard.md",
     "ideas/Kalidascope.md",
-    "Items/Flowers.md",
-    "Characters/Flower Guy.md",
-    "Characters/Dinner Guy.md",
-    "Characters/Mayor.md",
     "Tasks",
     "Other",
     "ideas",

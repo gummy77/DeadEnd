@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Pickup
+  - SpawnsGrass
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - No Fog
+  - No Fog Obscurer
   - 
   - 
   - 
@@ -44,3 +45,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - No Fog

@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:ideas -path:Tasks  ",
+  "search": "-path:ideas -path:Tasks",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -39,6 +39,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 128,
-  "scale": 0.5087618855792478,
+  "scale": 0.5087618855792471,
   "close": false
 }
