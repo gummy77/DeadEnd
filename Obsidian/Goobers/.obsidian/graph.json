@@ -1,12 +1,19 @@
 {
   "collapse-filter": false,
-  "search": "-path:ideas -path:Tasks",
+  "search": "-path:ideas -path:Tasks -path:\"Day 1\"  ",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
-  "showOrphans": true,
-  "collapse-color-groups": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
   "colorGroups": [
+    {
+      "query": "path:Locations  ",
+      "color": {
+        "a": 1,
+        "rgb": 6891117
+      }
+    },
     {
       "query": "#complete",
       "color": {
@@ -39,6 +46,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 128,
-  "scale": 0.5087618855792471,
+  "scale": 0.7132754626224246,
   "close": false
 }

@@ -3,7 +3,7 @@ Needs:
 - [[House Key]]
 
 Characters:
-- [[Dinner Guy]]
+- [[Day 1/Characters/Dinner Guys]]
 
 Has:
 - [[Clock]]
