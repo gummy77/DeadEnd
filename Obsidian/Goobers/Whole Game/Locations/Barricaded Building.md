@@ -2,3 +2,6 @@
 
 needs:
 - [[Crowbar]]
+
+has:
+- [[Phone]]

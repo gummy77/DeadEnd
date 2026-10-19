@@ -7,3 +7,8 @@
 - Update main menu car model
 - update car interior
 - sitting at benches
+- phone ringing
+- phone call audio
+- phone zone end
+- fop dialogue
+- 

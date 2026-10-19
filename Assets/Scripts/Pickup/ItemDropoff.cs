@@ -17,11 +17,13 @@ namespace Pickup
         
         [SerializeField] private bool repeatable;
 
+        [SerializeField] private bool isUsable = true;
+        
         private bool _completed;
         
         public bool DropItem(Item item)
         {
-            if (_completed && !repeatable) return false;
+            if (_completed && !repeatable && !isUsable) return false;
             
             if (item == requiredItem)
             {
@@ -34,6 +36,11 @@ namespace Pickup
             }
 
             return false;
+        }
+
+        public void SetUsable(bool usable)
+        {
+            isUsable = usable;
         }
     }
 }
