@@ -6,7 +6,7 @@
       {
         "id": "e977cad77cf3fb32",
         "type": "tabs",
-        "dimension": 32.30498016747465,
+        "dimension": 32.30498016747466,
         "children": [
           {
             "id": "0dae8d1ab39fbf34",
@@ -43,7 +43,7 @@
       {
         "id": "7845e5e149c2046c",
         "type": "tabs",
-        "dimension": 67.69501983252533,
+        "dimension": 67.69501983252535,
         "children": [
           {
             "id": "ca304d3c946d0a98",
@@ -224,8 +224,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "0dae8d1ab39fbf34",
+  "active": "ca304d3c946d0a98",
   "lastOpenFiles": [
+    "Tasks/Todo.md",
     "Day 2/Other/Phone.md",
     "Day 2/Characters/Fop.md",
     "Whole Game/Locations/Barricaded Building.md",
@@ -236,7 +237,6 @@
     "Whole Game/Locations/East.md",
     "Whole Game/Start.md",
     "Whole Game/Other",
-    "Tasks/Todo.md",
     "Whole Game/Items",
     "Whole Game",
     "Locations/West.md",
