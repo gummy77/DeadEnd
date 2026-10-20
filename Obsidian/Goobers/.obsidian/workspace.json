@@ -25,20 +25,21 @@
             }
           },
           {
-            "id": "4a4b0bad809cfdd9",
+            "id": "31a6dcf6382a2207",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 2/Other/Phone.md",
+                "file": "Locations/East.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Phone"
+              "title": "East"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "7845e5e149c2046c",
@@ -56,8 +57,21 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
+          },
+          {
+            "id": "ccb39a3ce2d43eb7",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -91,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#done",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -224,43 +238,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca304d3c946d0a98",
+  "active": "ccb39a3ce2d43eb7",
   "lastOpenFiles": [
-    "Tasks/Todo.md",
-    "Day 2/Other/Phone.md",
-    "Day 2/Characters/Fop.md",
-    "Whole Game/Locations/Barricaded Building.md",
-    "Whole Game/Locations/Groundskeepers shack.md",
-    "ideas/kaleidoscope.md",
-    "ideas/Dog.md",
-    "ideas/cat.md",
-    "Whole Game/Locations/East.md",
-    "Whole Game/Start.md",
-    "Whole Game/Other",
-    "Whole Game/Items",
+    "Locations/East.md",
+    "Other/Sunflower Eye.md",
+    "Other/Sunflower Heart.md",
+    "Other/Phone.md",
+    "Other/Meat Plants.md",
+    "Other/Crow.md",
+    "Other/Bridge.md",
+    "Other/Clock.md",
+    "Items/Feather.md",
+    "Characters/Scarecrow.md",
+    "Items/Heart.md",
+    "Items/Flowers.md",
+    "Items/Fish.md",
+    "Items/Fertiliser.md",
+    "Items/Crowbar.md",
+    "Items/Coin.md",
+    "Items/Bone.md",
+    "Characters/Tithe Collector.md",
+    "Locations/Barricaded Building.md",
+    "Items/Sword.md",
+    "Items/Shears.md",
+    "Items/Shack Key.md",
+    "Items/Scuba Mask.md",
+    "Items/Priest Beads.md",
+    "Items/Planks.md",
+    "Items/Nails.md",
+    "Characters",
+    "Day 3/Items",
+    "Day 3/Other",
+    "Day 3",
+    "Other",
+    "Items",
     "Whole Game",
-    "Locations/West.md",
-    "Whole Game/Locations/Church.md",
-    "Day 1/Characters/Dinner Guys 2.md",
     "Day 2/Other",
-    "Whole Game/Locations",
-    "Day 2/Items",
-    "Day 2/Characters",
-    "Day 2",
-    "Day 1",
-    "Day 1/Characters/Dinner Guys.md",
-    "Whole Game/Locations/East Sunflower Field.md",
-    "Whole Game/Locations/West Sunflower Field.md",
-    "Day 2/Characters/Scarecrow.md",
-    "Day 1/Other/Sunflower Eye.md",
-    "Day 2/Items/Heart.md",
-    "Day 1/Characters/Groundskeeper.md",
-    "Day 1/Other/Bridge.md",
-    "Day 1/Items/Planks.md",
-    "Day 1/Items/Nails.md",
-    "Day 2/Items/Coin.md",
-    "Day 2/Items/Crowbar.md",
-    "Other/Fountain.md",
-    "Days"
+    "Locations",
+    "Day 2/Items"
   ]
 }

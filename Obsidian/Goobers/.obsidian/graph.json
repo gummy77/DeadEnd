@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:ideas -path:Tasks -path:\"Day 1\"  ",
+  "search": "-path:Tasks tag:#day1",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -8,31 +8,17 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
+      "query": "path:\"Characters\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 6938706
+      }
+    },
+    {
       "query": "path:Locations  ",
       "color": {
         "a": 1,
         "rgb": 6891117
-      }
-    },
-    {
-      "query": "#complete",
-      "color": {
-        "a": 1,
-        "rgb": 122629
-      }
-    },
-    {
-      "query": "#loose",
-      "color": {
-        "a": 1,
-        "rgb": 14701138
-      }
-    },
-    {
-      "query": "#inprogress",
-      "color": {
-        "a": 1,
-        "rgb": 14734418
       }
     }
   ],
@@ -46,6 +32,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 128,
-  "scale": 0.5087618855792457,
+  "scale": 0.7132754626224239,
   "close": false
 }

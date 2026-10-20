@@ -1,3 +1,0 @@
-#complete 
-#pickup 
-swims around

@@ -1,5 +1,0 @@
-#inprogress 
-
-has:
-- [[Crow]]
-- [[Bone]]

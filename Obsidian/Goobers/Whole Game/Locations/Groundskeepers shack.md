@@ -1,4 +1,0 @@
-#inprogress 
-has:
-- [[Crowbar]]
-- [[Nails]]
