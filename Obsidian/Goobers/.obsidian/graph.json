@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:Tasks tag:#day1",
+  "search": "-path:Tasks tag:#day3",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -8,7 +8,14 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"Characters\"  ",
+      "query": "tag:#loose",
+      "color": {
+        "a": 1,
+        "rgb": 15608619
+      }
+    },
+    {
+      "query": "path:Characters",
       "color": {
         "a": 1,
         "rgb": 6938706

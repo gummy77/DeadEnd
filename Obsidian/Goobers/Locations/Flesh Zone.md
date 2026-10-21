@@ -1,8 +1,7 @@
+#day3 
 
+entry through the [[Sunflower Mouth]].
 
-entry through:
-- 
+has many [[Meat Plants]].
 
-contains:
-- [[Meat Plants]]
-- [[Ancient Door]]
+has the [[Ancient Door]].

@@ -1,4 +1,4 @@
 
 #day2 
 
-Characters:
+has the [[Dirt mound]] in the centre.

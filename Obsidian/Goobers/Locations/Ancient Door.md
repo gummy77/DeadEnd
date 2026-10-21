@@ -1,8 +1,6 @@
 
 #day3 
 
-needs:
-- [[ancient key]]
+is unlocked by the [[ancient key]].
 
-leads to:
-- [[Sunflower Heart]]
+leads to the [[Sunflower Heart]].

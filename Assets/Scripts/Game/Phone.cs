@@ -8,6 +8,14 @@ namespace Game
     {
         [SerializeField] private Transform playerTransform;
         [SerializeField] private PlayerController  playerController;
+        [SerializeField] private AudioSource phoneAudioSource;
+
+        [SerializeField] private AudioClip callAudio;
+
+        [SerializeField] private Transform phoneTransform;
+        
+        private Vector3 phoneStartPosition;
+        private Quaternion phoneStartRotation;
         
         public void Answer()
         {
@@ -21,10 +29,40 @@ namespace Game
 
         private async Awaitable AnswerCall()
         {
-            playerTransform.position +=  Vector3.up * 50;
+            phoneAudioSource.Stop();
+            phoneAudioSource.PlayOneShot(callAudio);
             playerController.movementController.LockMovement();
 
-            await Awaitable.WaitForSecondsAsync(6);
+            phoneStartPosition = phoneTransform.position;
+            phoneStartRotation = phoneTransform.rotation;
+            
+            float timer = 0;
+
+            while (timer < 1f)
+            {
+                timer += Time.deltaTime;
+
+                phoneTransform.position = Vector3.Lerp(phoneStartPosition, playerTransform.position + (playerTransform.rotation * new Vector3(0.5f, 1f, 0f)), timer);
+                phoneTransform.rotation = Quaternion.Lerp(phoneStartRotation, Quaternion.Euler(90, 0, 0) , timer);
+                
+                await Awaitable.EndOfFrameAsync();
+            }
+            
+            await Awaitable.WaitForSecondsAsync(10);
+            
+            while (timer > 0f)
+            {
+                timer -= Time.deltaTime;
+
+                phoneTransform.position = Vector3.Lerp(phoneStartPosition, playerTransform.position + (playerTransform.rotation * new Vector3(0.5f, 1f, 0f)), timer);
+                phoneTransform.rotation = Quaternion.Lerp(phoneStartRotation, Quaternion.Euler(90, 0, 0) , timer);
+                
+                await Awaitable.EndOfFrameAsync();
+            }
+            
+            await Awaitable.WaitForSecondsAsync(1.5f);
+            
+            playerTransform.position +=  Vector3.up * 50;
             
             playerController.movementController.UnlockMovement();
         }

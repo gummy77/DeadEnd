@@ -5,4 +5,4 @@ wants [[Sunflower Eye]] to be healthy
 shows you where the [[Planks]] are when asked.
 
 #day2 
-moves to the sunflower store?
+moves to the [[Flower Stand]], offers to sell you the [[Strange Seed]] they found in the field for #LOOSE 
