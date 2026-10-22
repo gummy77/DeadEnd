@@ -25,34 +25,35 @@
             }
           },
           {
-            "id": "261cda6506bd9ff9",
+            "id": "ee50272ef8bc66a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Locations/Radio Tower.md",
+                "file": "Characters/octopus.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Radio Tower"
+              "title": "octopus"
             }
           },
           {
-            "id": "062d2e6ed672e136",
+            "id": "61034f594cc01f1f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Items/ancient key.md",
+                "file": "Characters/crab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ancient key"
+              "title": "crab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "7845e5e149c2046c",
@@ -130,7 +131,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#LOOSE",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -265,32 +266,32 @@
   },
   "active": "ccb39a3ce2d43eb7",
   "lastOpenFiles": [
+    "Characters/octopus.md",
+    "Characters/crab.md",
+    "Items/Sword.md",
+    "Characters/Farmer.md",
+    "Characters/Eyes.md",
     "Tasks/Todo.md",
+    "Items/Five Dollars.md",
+    "Characters/Tithe Collector.md",
+    "ideas/Pile of Worms.md",
+    "Other/Sunflower Mouth.md",
     "Locations/Radio Tower.md",
     "Items/ancient key.md",
     "Other/TV.md",
     "Other/Clock.md",
-    "Characters/Eyes.md",
     "Items/Electrical Doodad.md",
-    "Items/Sword.md",
     "Characters/Priest.md",
     "Other/Meat Plants.md",
     "Characters/Groundskeeper.md",
     "Other/Phone.md",
-    "Characters/Farmer.md",
     "Other/Sunflower Heart.md",
     "Locations/Ancient Door.md",
     "Locations/Dirt mound.md",
-    "Other/Sunflower Mouth.md",
     "Locations/Flesh Zone.md",
     "Items/Fertiliser.md",
     "Locations/East Sunflower Field.md",
     "Items/Strange Seed.md",
-    "Locations/Flower Stand.md",
-    "Locations/Graveyard.md",
-    "Locations/East.md",
-    "Other/Sunflower Eye.md",
-    "Other/Crow.md",
     "Characters",
     "Day 3/Items",
     "Day 3/Other",

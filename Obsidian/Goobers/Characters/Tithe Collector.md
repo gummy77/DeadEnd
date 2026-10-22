@@ -2,7 +2,6 @@
 
 
 wants:
-- [[Coin]] x 5
-
+- [[Coin]] x 3
 gives:
 - 

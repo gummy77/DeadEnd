@@ -1,7 +1,6 @@
 
 
 ## Loose threads
-- [[Farmer]] seed trade
 - [[crab]] and [[octopus]] and underwater
 - [[clock]] item
 - reason for [[Phone]]
@@ -11,17 +10,18 @@
 - phone zone
 - phone guy? fredy fivebear
 - fop dialogue
-- Flower Stand
-- Strange Seed
-- Farmer day 2
-- dirt mound
-- fish hook placement
-- fisherman dialogue post fish
-- seed planting
-- scarecrow hinting eye
-- Electrical doodad
+- fop speak audio
+- fish speak audio
 - 
 
+- fish hook placement
+- fisherman dialogue post fish
+- Electrical doodad
+- sunflower mouth growth
+- 
+
+3x west locations
+2.5x east locations
 
 ## improvements
 

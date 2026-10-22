@@ -45,25 +45,33 @@ namespace Player
             }
         }
 
-        public void StartTalkingTo(DialogueSpeaker speaker, int dialogueSectionIndex = -1)
+        public void StartTalkingTo(DialogueSpeaker speaker, int dialogueSectionIndex = -1, bool doesSetSection = true)
         {
-            WaitToTalkTo(speaker, dialogueSectionIndex).DiscardAwaitable(nameof(WaitToTalkTo));
+            WaitToTalkTo(speaker, dialogueSectionIndex, doesSetSection).DiscardAwaitable(nameof(WaitToTalkTo));
         }
 
-        public async Awaitable WaitToTalkTo(DialogueSpeaker speaker, int dialogueSectionIndex = -1)
+        public async Awaitable WaitToTalkTo(DialogueSpeaker speaker, int dialogueSectionIndex, bool doesSetSection)
         {
             while (_isSpeaking)
             {
                 await Awaitable.NextFrameAsync();
             }
-
+            
             SetSpeaker(speaker);
+            
+            int currentSectionIndex = _activeSpeaker.dialogueSectionIndex;
+            
             if (dialogueSectionIndex != -1)
             {
                 _activeSpeaker.dialogueSectionIndex = dialogueSectionIndex;
             }
 
             Speak().DiscardAwaitable(nameof(Speak));
+            
+            if (doesSetSection)
+            {
+                _activeSpeaker.dialogueSectionIndex = currentSectionIndex;
+            }
         }
         
         private async Awaitable Speak()

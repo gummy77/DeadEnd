@@ -1,11 +1,11 @@
 {
   "collapse-filter": false,
-  "search": "-path:Tasks tag:#day3",
+  "search": "-path:Tasks tag:#day2",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "tag:#loose",
@@ -39,6 +39,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 128,
-  "scale": 0.7132754626224239,
+  "scale": 0.5087618855792453,
   "close": false
 }

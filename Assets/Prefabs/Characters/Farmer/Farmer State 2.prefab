@@ -1,0 +1,662 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2999177536776677971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8002132802766890966}
+  - component: {fileID: 4820014986296147242}
+  - component: {fileID: 3134153359060543537}
+  - component: {fileID: 392334818318672665}
+  - component: {fileID: 1745193636968802379}
+  - component: {fileID: 4676364893839561782}
+  - component: {fileID: 7559727940612485028}
+  - component: {fileID: 7265105958461546467}
+  m_Layer: 0
+  m_Name: Farmer State 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8002132802766890966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999177536776677971}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.71297514, z: 0, w: 0.7011894}
+  m_LocalPosition: {x: -35.41, y: -0.029, z: -34.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5183922160966861470}
+  - {fileID: 4607636544051969965}
+  - {fileID: 6694227673841738333}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.955, z: 0}
+--- !u!82 &4820014986296147242
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999177536776677971}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 93a137461cc14e00295d9bf7c4b8a183, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &3134153359060543537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999177536776677971}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 3, z: 3}
+  m_Center: {x: -1, y: 1, z: 2.5}
+--- !u!136 &392334818318672665
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999177536776677971}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &1745193636968802379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999177536776677971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be48b1b501641889e6e8c8c588cad1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSpeaker
+  dialogueColor: {r: 0.7529412, g: 0.7019608, b: 0.32941177, a: 1}
+  dialogueSpeed: 1
+  lookOffset: {x: 0, y: 2.6, z: 0}
+  speakBiteAudioClip: {fileID: 8300000, guid: 18b66c93b04f8d62d8796c1218c42bea, type: 3}
+  dialogueSections:
+  - sectionName: Flower Cart Dialogue
+    textToSpeak:
+    - lineText: hello again!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: would you like any fl-
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: hmm
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: i seem to be out of flowers...
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: it's been a rough harvest this year...
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: i found this- uhh.. seed? in the sunflower field if you want it
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: it'll be... 5? dollars?
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1745193636968802379}
+            m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
+            m_MethodName: MoveDialogueSection
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 1
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  - sectionName: Seed loop
+    textToSpeak:
+    - lineText: hello!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: If you'd like the seed it'll be 5 dollars
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  - sectionName: recieve flowers
+    textToSpeak:
+    - lineText: you're trying to sell me flowers?
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: you're gonna put me out of business!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  - sectionName: receive Five Dollars
+    textToSpeak:
+    - lineText: oh!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: you actually wanted the seed?
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: well here you go I guess!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 7559727940612485028}
+            m_TargetAssemblyTypeName: Farmer, Assembly-CSharp
+            m_MethodName: GivePlayerSeed
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - lineText: I hope it grows into something beatiful!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1745193636968802379}
+            m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
+            m_MethodName: MoveDialogueSection
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 4
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  - sectionName: grow loop
+    textToSpeak:
+    - lineText: hello!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: hows the seed growing?
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  dialogueSectionIndex: 0
+  dialogueEnabled: 1
+--- !u!114 &4676364893839561782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999177536776677971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 11400000, guid: 2795b4bd523c85a4baea327187bef386, type: 2}
+  consumesItem: 0
+  successText: 
+  failureText: The farmer doesn't want this...
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7559727940612485028}
+        m_TargetAssemblyTypeName: Farmer, Assembly-CSharp
+        m_MethodName: TryGiveFlowers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  repeatable: 1
+  isUsable: 1
+--- !u!114 &7559727940612485028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999177536776677971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d690d22aa0becf844b9d9a588f69287c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Farmer
+  planksTransform: {fileID: 0}
+  plankDialogueSectionIndex: 4
+  plankMovePosition: {x: -91.1, y: 0, z: -86.6}
+  dialogueSpeaker: {fileID: 1745193636968802379}
+  giveFlowersDialogueSectionIndex: 2
+  strangeSeedItem: {fileID: 11400000, guid: b96b57db6994e0a4b8c936c1d6c9273d, type: 2}
+  recieveFiveDollarsDialogueSectionIndex: 3
+--- !u!114 &7265105958461546467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999177536776677971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 11400000, guid: fadc6ebbd4829194fa2e4371639c5e8d, type: 2}
+  consumesItem: 1
+  successText: 
+  failureText: The farmer doesn't want this...
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7559727940612485028}
+        m_TargetAssemblyTypeName: Farmer, Assembly-CSharp
+        m_MethodName: ReceiveFiveDollars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  repeatable: 0
+  isUsable: 1
+--- !u!1 &4588007124398848949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4607636544051969965}
+  - component: {fileID: 2781366347606584833}
+  m_Layer: 0
+  m_Name: ShadowDecal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4607636544051969965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4588007124398848949}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8002132802766890966}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2781366347606584833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4588007124398848949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: 0f7b6b0be5aa0203ebab19cde58bb00f, type: 2}
+  m_DrawDistance: 500
+  m_FadeScale: 1
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 1.25}
+  m_Size: {x: 1.5, y: 1.5, z: 3}
+  m_FadeFactor: 0.6
+  version: 1
+  m_DecalLayerMask: 1
+--- !u!1 &5135995110245946923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6694227673841738333}
+  m_Layer: 0
+  m_Name: Strange Seed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6694227673841738333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5135995110245946923}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7129768, z: -0, w: 0.7011876}
+  m_LocalPosition: {x: -1.299978, y: 1.911, z: 1.0074662}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2822588595280572632}
+  m_Father: {fileID: 8002132802766890966}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2351266179986298675
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6694227673841738333}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 34c1c14abfd67134f88866ed48118bc8, type: 2}
+    - target: {fileID: 919132149155446097, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+      propertyPath: m_Name
+      value: Meat Ball
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+--- !u!4 &2822588595280572632 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9239707802794264eaea0556e59ccec7, type: 3}
+  m_PrefabInstance: {fileID: 2351266179986298675}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4646101557497685365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8002132802766890966}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da6b996e32a429a7c91e32ade9c305ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2571118854743697038, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e220d7ff5a327ce98dee0e51c9c393d, type: 2}
+    - target: {fileID: -1461304994638716399, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e83c76b488cdd5debb6916dd6d4dd61, type: 2}
+    - target: {fileID: -516098083770646512, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_Name
+      value: Farmer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+--- !u!4 &5183922160966861470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+  m_PrefabInstance: {fileID: 4646101557497685365}
+  m_PrefabAsset: {fileID: 0}

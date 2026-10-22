@@ -1,0 +1,388 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8032839629442165321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6487241940392295451}
+  - component: {fileID: 4131937640339383525}
+  - component: {fileID: 3933920896765199130}
+  - component: {fileID: 9206579800754261277}
+  - component: {fileID: 3067346089045034143}
+  - component: {fileID: 7319418335835059192}
+  - component: {fileID: 7846699943392438137}
+  m_Layer: 0
+  m_Name: Farmer State 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6487241940392295451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032839629442165321}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.9907763, z: -0, w: -0.13550803}
+  m_LocalPosition: {x: -10.81, y: -0.029, z: 160.79}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 480034112711840510}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 195.576, z: 0}
+--- !u!82 &4131937640339383525
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032839629442165321}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 93a137461cc14e00295d9bf7c4b8a183, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &3933920896765199130
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032839629442165321}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 3, z: 2}
+  m_Center: {x: 0, y: 1, z: 2}
+--- !u!136 &9206579800754261277
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032839629442165321}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &3067346089045034143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032839629442165321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be48b1b501641889e6e8c8c588cad1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSpeaker
+  dialogueColor: {r: 0.7529412, g: 0.7019608, b: 0.32941177, a: 1}
+  dialogueSpeed: 1
+  lookOffset: {x: 0, y: 2.6, z: 0}
+  speakBiteAudioClip: {fileID: 8300000, guid: 18b66c93b04f8d62d8796c1218c42bea, type: 3}
+  dialogueSections:
+  - sectionName: seed growth 1
+    textToSpeak:
+    - lineText: that seems like a good spot for it!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: now all it needs is some fertiliser!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  - sectionName: seed growth 2
+    textToSpeak:
+    - lineText: wow its grown pretty fast!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: must be a good one
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: I bet it'll take another day for it to fully grow
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+    - lineText: just one sleep away!
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 3067346089045034143}
+            m_TargetAssemblyTypeName: DialogueSpeaker, Assembly-CSharp
+            m_MethodName: MoveDialogueSection
+            m_Mode: 3
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 2
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+  - sectionName: seed loop
+    textToSpeak:
+    - lineText: I bet it needs just one more day to fully grow
+      onLineFinished:
+        m_PersistentCalls:
+          m_Calls: []
+  dialogueSectionIndex: 0
+  dialogueEnabled: 1
+--- !u!114 &7319418335835059192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032839629442165321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28266fdbea205f4f99eed1cdfd49686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pickup.ItemDropoff
+  requiredItem: {fileID: 0}
+  consumesItem: 0
+  successText: 
+  failureText: The farmer doesn't want this...
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatable: 1
+  isUsable: 1
+--- !u!114 &7846699943392438137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032839629442165321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d690d22aa0becf844b9d9a588f69287c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Farmer
+  planksTransform: {fileID: 0}
+  plankDialogueSectionIndex: 4
+  plankMovePosition: {x: -91.1, y: 0, z: -86.6}
+  dialogueSpeaker: {fileID: 3067346089045034143}
+  giveFlowersDialogueSectionIndex: 2
+  strangeSeedItem: {fileID: 11400000, guid: b96b57db6994e0a4b8c936c1d6c9273d, type: 2}
+  recieveFiveDollarsDialogueSectionIndex: 3
+--- !u!1001 &82143440220927253
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6487241940392295451}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: da6b996e32a429a7c91e32ade9c305ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2571118854743697038, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e220d7ff5a327ce98dee0e51c9c393d, type: 2}
+    - target: {fileID: -1461304994638716399, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e83c76b488cdd5debb6916dd6d4dd61, type: 2}
+    - target: {fileID: -516098083770646512, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+      propertyPath: m_Name
+      value: Farmer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+--- !u!4 &480034112711840510 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dde0bf47203db06f89c82e8c6534f78e, type: 3}
+  m_PrefabInstance: {fileID: 82143440220927253}
+  m_PrefabAsset: {fileID: 0}
