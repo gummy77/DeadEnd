@@ -39,7 +39,7 @@ namespace Player
                 {
                     if (_interactAction.WasPressedThisFrame())
                     {
-                        Speak().DiscardAwaitable(nameof(Speak));
+                        Speak(-1).DiscardAwaitable(nameof(Speak));
                     }
                 }
             }
@@ -66,15 +66,17 @@ namespace Player
                 _activeSpeaker.dialogueSectionIndex = dialogueSectionIndex;
             }
 
-            Speak().DiscardAwaitable(nameof(Speak));
-            
-            if (doesSetSection)
+            if (!doesSetSection)
             {
-                _activeSpeaker.dialogueSectionIndex = currentSectionIndex;
+                currentSectionIndex = -1;
             }
+            
+            Speak(currentSectionIndex).DiscardAwaitable(nameof(Speak));
+            
+
         }
         
-        private async Awaitable Speak()
+        private async Awaitable Speak(int sectionToSetTo)
         {
             _playerController.movementController.LockMovement();
             _playerController.cameraController.StartLookingAt(_activeSpeaker.GetLookPosition());
@@ -112,6 +114,11 @@ namespace Player
             _playerController.cameraController.StopLookingAt();
             _playerController.movementController.UnlockMovement();
             _isSpeaking = false;
+
+            if (sectionToSetTo != -1)
+            {
+                _activeSpeaker.dialogueSectionIndex = sectionToSetTo;
+            }
         }
         
         public void SetSpeaker(DialogueSpeaker speaker)

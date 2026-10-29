@@ -51,7 +51,7 @@ namespace Player
                     {
                         Ray ray = Camera.main.ScreenPointToRay(_pointAction.ReadValue<Vector2>());
 
-                        if (Physics.Raycast(ray, out RaycastHit hit, 20f))
+                        if (Physics.Raycast(ray, out RaycastHit hit, 10f))
                         {
                             if (hit.transform.CompareTag("Pickup"))
                             {
