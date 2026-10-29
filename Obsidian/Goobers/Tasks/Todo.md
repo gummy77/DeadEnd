@@ -40,6 +40,7 @@
 ## fixes
 
 - Update Kelp Shader
+- Mask camera updated when lookingAt
 
 
 ## Ideas
