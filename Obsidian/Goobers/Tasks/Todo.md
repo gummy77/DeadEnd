@@ -18,10 +18,12 @@
 - fisherman dialogue post fish
 - Electrical doodad
 - sunflower mouth growth
+- Infected Dialogue
+- Mayor day 2 dialogue
 - 
 
-3x west locations
-2.5x east locations
+2x west locations
+1.5x east locations
 
 ## improvements
 
@@ -32,10 +34,12 @@
 - update car interior
 - Update main menu car model
 - sitting at benches
+- better bag blood
+- Sunflower Rotation improvements
 
 ## fixes
 
-- 
+- Update Kelp Shader
 
 
 ## Ideas
