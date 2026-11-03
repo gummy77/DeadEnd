@@ -24,7 +24,7 @@ namespace Player
         public bool IsGrounded { get; private set; }
         public Vector3 Velocity { get; private set; }
         
-        private Rigidbody _rigidbody;
+        public Rigidbody rb;
         private AudioSource _jumpAudioSource;
 
         private InputAction _moveAction;
@@ -35,7 +35,7 @@ namespace Player
             _moveAction = InputSystem.actions.FindAction("Move");
             _jumpAction = InputSystem.actions.FindAction("Jump");
 
-            _rigidbody =  GetComponent<Rigidbody>();
+            rb =  GetComponent<Rigidbody>();
             
             _jumpAudioSource = GetComponent<AudioSource>();
         }
@@ -62,7 +62,7 @@ namespace Player
 
             if (_jumpAction.IsPressed() && IsGrounded)
             {
-                _rigidbody.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+                rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
                 PlayJumpSoundRpc();
 
                 IsGrounded = false;

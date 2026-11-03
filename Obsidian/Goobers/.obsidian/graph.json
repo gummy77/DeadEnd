@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:Tasks tag:#day2",
+  "search": "-path:Tasks tag:#day3",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -39,6 +39,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 128,
-  "scale": 0.5087618855792442,
+  "scale": 0.9999999999999716,
   "close": false
 }

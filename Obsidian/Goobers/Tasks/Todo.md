@@ -20,6 +20,14 @@
 - sunflower mouth growth
 - Infected Dialogue
 - Mayor day 2 dialogue
+- Bubble Coloumn
+- SandWorm
+- Helmet Guy
+- Exploding guy
+- exploding guy friends
+- Card game guy
+- mimic crab creature
+- smiler
 - 
 
 2x west locations
@@ -36,6 +44,8 @@
 - sitting at benches
 - better bag blood
 - Sunflower Rotation improvements
+- Jump Rotation / Animation
+- 
 
 ## fixes
 

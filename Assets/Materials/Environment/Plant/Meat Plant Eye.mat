@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Meat Plant Eye
-  m_Shader: {fileID: -6465566751694194690, guid: 0c2e26b8d7e471840b271cf5d1d416b8, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 4e42f7fa57696a745928448bcd466940, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,6 +37,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AltTex:
+        m_Texture: {fileID: 2800000, guid: 5144f0f0e22bead4180885f3d8b6952a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -101,6 +105,8 @@ Material:
     - _Alpha_Clip: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _Blink_Speed: 1
+    - _Blink_Time: 0.95
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -137,6 +143,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Shadow_Color: {r: 0.3962264, g: 0.37940547, b: 0.37940547, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _Texture_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Texture_Scale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -4,7 +4,9 @@ namespace Player
 {
     public class PlayerAnimationController : MonoBehaviour
     {
-        private static readonly int Speed = Animator.StringToHash("Speed");
+        private static readonly int VerticalSpeed = Animator.StringToHash("VerticalSpeed");
+        private static readonly int IsGrounded = Animator.StringToHash("IsGrounded");
+        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
 
         [Header("References")]
         [SerializeField] private Animator playerAnimator;
@@ -21,7 +23,12 @@ namespace Player
 
         private void Update()
         {
-            playerAnimator.SetFloat(Speed, _playerMovementController.Velocity.magnitude);
+            float horizontal = (new Vector3(_playerMovementController.Velocity.x, 0, _playerMovementController.Velocity.z)).magnitude;
+            float vertical = _playerMovementController.rb.linearVelocity.y;
+            
+            playerAnimator.SetBool(IsWalking, horizontal >= 0.1f);
+            playerAnimator.SetFloat(VerticalSpeed, vertical);
+            playerAnimator.SetBool(IsGrounded, _playerMovementController.IsGrounded);
         }
     }
 }
