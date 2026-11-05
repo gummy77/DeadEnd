@@ -43,7 +43,7 @@ public class DialogueSpeaker : MonoBehaviour
 
     public Vector3 GetLookPosition()
     {
-        return transform.position + lookOffset;
+        return transform.position + (transform.rotation * lookOffset);
     }
 
     public void PlaySpeakBite()

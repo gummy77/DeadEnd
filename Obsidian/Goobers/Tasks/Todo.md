@@ -12,7 +12,7 @@
 - fop dialogue
 - fop speak audio
 - fish speak audio
-- 
+- Card winning
 
 - fish hook placement
 - fisherman dialogue post fish
@@ -25,7 +25,6 @@
 - Helmet Guy
 - Exploding guy
 - exploding guy friends
-- Card game guy
 - mimic crab creature
 - smiler
 - 
@@ -41,10 +40,10 @@
 - Better drowning effect
 - update car interior
 - Update main menu car model
-- sitting at benches
+- sitting at benches / idle sitdown animation
 - better bag blood
 - Sunflower Rotation improvements
-- Jump Rotation / Animation
+- Jump Animation
 - 
 
 ## fixes

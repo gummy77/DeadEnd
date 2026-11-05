@@ -23,6 +23,7 @@ namespace Player
         public PlayerAnimationController animationController;
         public PlayerInventoryController inventoryController;
         public CameraController cameraController;
+        public SpeakController speakController;
 
         public static Action<PlayerController> PlayerSpawned;
         

@@ -87,6 +87,7 @@ MonoBehaviour:
   animationController: {fileID: 6160955820097116278}
   inventoryController: {fileID: 6332934679791016769}
   cameraController: {fileID: 6124916392400111869}
+  speakController: {fileID: 8436287524622153792}
 --- !u!114 &6160955820097116278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,7 +673,7 @@ Transform:
   m_GameObject: {fileID: 4351567830591632425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 78.89, y: 0, z: -47.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6857,7 +6858,7 @@ Transform:
   m_GameObject: {fileID: 9039272277621443159}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 78.89, y: 0, z: -47.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

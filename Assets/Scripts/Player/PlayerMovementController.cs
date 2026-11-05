@@ -29,6 +29,8 @@ namespace Player
 
         private InputAction _moveAction;
         private InputAction _jumpAction;
+
+        private int _lockCount;
         
         public void Setup()
         {
@@ -77,11 +79,16 @@ namespace Player
 
         public void LockMovement()
         {
+            _lockCount++;
             _isLocked = true;
         }
         public void UnlockMovement()
         {
-            _isLocked = false;
+            _lockCount--;
+            if (_lockCount <= 0)
+            {
+                _isLocked = false;
+            }
         }
     }
 }

@@ -72,8 +72,6 @@ namespace Player
             }
             
             Speak(currentSectionIndex).DiscardAwaitable(nameof(Speak));
-            
-
         }
         
         private async Awaitable Speak(int sectionToSetTo)
@@ -113,12 +111,11 @@ namespace Player
             speakText.text = "";
             _playerController.cameraController.StopLookingAt();
             _playerController.movementController.UnlockMovement();
-            _isSpeaking = false;
-
             if (sectionToSetTo != -1)
             {
                 _activeSpeaker.dialogueSectionIndex = sectionToSetTo;
             }
+            _isSpeaking = false;
         }
         
         public void SetSpeaker(DialogueSpeaker speaker)
